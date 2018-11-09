@@ -34,6 +34,7 @@ namespace Projet2BD
 
         private void btnAjouter_Click(object sender, EventArgs e)
         {
+            var exprMotDePasse = new Regex("^(?=.*\\p{L})(?=.*\\d)(?=.*[^\\p{L}\\p{N}]).{8,}$");
             var exprCodePostal = new Regex("^[A-Za-z][0-9][A-Za-z] ?[0-9][A-Za-z][0-9]$");
             var exprTel = new Regex(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$");
 

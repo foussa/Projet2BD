@@ -1,22 +1,35 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Projet2BD
 {
     static class Program
     {
-        /// <summary>
-        /// Point d'entrée principal de l'application.
-        /// </summary>
+        public static bool quitter = false;
+
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GestionEmploye());
+
+            while (!quitter)
+            {
+                Connexion connexion = new Connexion();
+                Application.Run(connexion);
+
+                if (connexion.reussi)
+                {
+                    MenuPrincipal menuPrincipal = new MenuPrincipal();
+                    menuPrincipal.noEmploye = connexion.noEmploye;
+                    menuPrincipal.noTypeEmploye = connexion.noTypeEmploye;
+                    Application.Run(menuPrincipal);
+                }
+                else
+                {
+                    quitter = true;
+                }
+            }
         }
     }
 }
