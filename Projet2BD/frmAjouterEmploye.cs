@@ -66,16 +66,11 @@ namespace Projet2BD
         {
             this.Validate();
             this.provincesBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.bD5B6TP2_BrodeurKoumaDataSet);
 
         }
 
         private void frmAjouterEmploye_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'bD5B6TP2_BrodeurKoumaDataSet.TypesEmploye' table. You can move, or remove it, as needed.
-            this.typesEmployeTableAdapter.Fill(this.bD5B6TP2_BrodeurKoumaDataSet.TypesEmploye);
-            // TODO: This line of code loads data into the 'bD5B6TP2_BrodeurKoumaDataSet.Provinces' table. You can move, or remove it, as needed.
-            this.provincesTableAdapter.Fill(this.bD5B6TP2_BrodeurKoumaDataSet.Provinces);
 
         }
     }

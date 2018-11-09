@@ -60,19 +60,14 @@
             this.cbSexe = new System.Windows.Forms.ComboBox();
             this.nupAge = new System.Windows.Forms.NumericUpDown();
             this.nupNoCivique = new System.Windows.Forms.NumericUpDown();
-            this.bD5B6TP2_BrodeurKoumaDataSet = new Projet2BD.BD5B6TP2_BrodeurKoumaDataSet();
             this.provincesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.provincesTableAdapter = new Projet2BD.BD5B6TP2_BrodeurKoumaDataSetTableAdapters.ProvincesTableAdapter();
-            this.tableAdapterManager = new Projet2BD.BD5B6TP2_BrodeurKoumaDataSetTableAdapters.TableAdapterManager();
             this.cbProvince = new System.Windows.Forms.ComboBox();
             this.nupSalaire = new System.Windows.Forms.NumericUpDown();
             this.typesEmployeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.typesEmployeTableAdapter = new Projet2BD.BD5B6TP2_BrodeurKoumaDataSetTableAdapters.TypesEmployeTableAdapter();
             this.cbTypeEmp = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.errMessage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupAge)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupNoCivique)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bD5B6TP2_BrodeurKoumaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.provincesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupSalaire)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.typesEmployeBindingSource)).BeginInit();
@@ -363,37 +358,6 @@
             0,
             0});
             // 
-            // bD5B6TP2_BrodeurKoumaDataSet
-            // 
-            this.bD5B6TP2_BrodeurKoumaDataSet.DataSetName = "BD5B6TP2_BrodeurKoumaDataSet";
-            this.bD5B6TP2_BrodeurKoumaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // provincesBindingSource
-            // 
-            this.provincesBindingSource.DataMember = "Provinces";
-            this.provincesBindingSource.DataSource = this.bD5B6TP2_BrodeurKoumaDataSet;
-            // 
-            // provincesTableAdapter
-            // 
-            this.provincesTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.AbonnementsTableAdapter = null;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.DependantsTableAdapter = null;
-            this.tableAdapterManager.DepensesTableAdapter = null;
-            this.tableAdapterManager.EmployesTableAdapter = null;
-            this.tableAdapterManager.PartiesJoueesTableAdapter = null;
-            this.tableAdapterManager.PrixDepensesAbonnementsTableAdapter = null;
-            this.tableAdapterManager.ProvincesTableAdapter = this.provincesTableAdapter;
-            this.tableAdapterManager.ReabonnementsTableAdapter = null;
-            this.tableAdapterManager.ServicesTableAdapter = null;
-            this.tableAdapterManager.TerrainsTableAdapter = null;
-            this.tableAdapterManager.TypesAbonnementTableAdapter = null;
-            this.tableAdapterManager.TypesEmployeTableAdapter = this.typesEmployeTableAdapter;
-            this.tableAdapterManager.UpdateOrder = Projet2BD.BD5B6TP2_BrodeurKoumaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
             // cbProvince
             // 
             this.cbProvince.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.provincesBindingSource, "Nom", true));
@@ -433,11 +397,6 @@
             // typesEmployeBindingSource
             // 
             this.typesEmployeBindingSource.DataMember = "TypesEmploye";
-            this.typesEmployeBindingSource.DataSource = this.bD5B6TP2_BrodeurKoumaDataSet;
-            // 
-            // typesEmployeTableAdapter
-            // 
-            this.typesEmployeTableAdapter.ClearBeforeFill = true;
             // 
             // cbTypeEmp
             // 
@@ -496,7 +455,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.errMessage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupAge)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupNoCivique)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bD5B6TP2_BrodeurKoumaDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.provincesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupSalaire)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.typesEmployeBindingSource)).EndInit();
@@ -539,12 +497,8 @@
         private System.Windows.Forms.NumericUpDown nupAge;
         private System.Windows.Forms.ComboBox cbSexe;
         private System.Windows.Forms.BindingSource provincesBindingSource;
-        private BD5B6TP2_BrodeurKoumaDataSet bD5B6TP2_BrodeurKoumaDataSet;
-        private BD5B6TP2_BrodeurKoumaDataSetTableAdapters.ProvincesTableAdapter provincesTableAdapter;
-        private BD5B6TP2_BrodeurKoumaDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.ComboBox cbProvince;
         private System.Windows.Forms.NumericUpDown nupSalaire;
-        private BD5B6TP2_BrodeurKoumaDataSetTableAdapters.TypesEmployeTableAdapter typesEmployeTableAdapter;
         private System.Windows.Forms.BindingSource typesEmployeBindingSource;
         private System.Windows.Forms.ComboBox cbTypeEmp;
     }

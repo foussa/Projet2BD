@@ -21,14 +21,12 @@ namespace Projet2BD
         {
             this.Validate();
             this.employesBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.bD5B6TP2_BrodeurKoumaDataSet);
 
         }
 
         private void GestionEmploye_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'bD5B6TP2_BrodeurKoumaDataSet.Employes' table. You can move, or remove it, as needed.
-            this.employesTableAdapter.Fill(this.bD5B6TP2_BrodeurKoumaDataSet.Employes);
 
         }
 

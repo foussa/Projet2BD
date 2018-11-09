@@ -29,10 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.bD5B6TP2_BrodeurKoumaDataSet = new Projet2BD.BD5B6TP2_BrodeurKoumaDataSet();
             this.employesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.employesTableAdapter = new Projet2BD.BD5B6TP2_BrodeurKoumaDataSetTableAdapters.EmployesTableAdapter();
-            this.tableAdapterManager = new Projet2BD.BD5B6TP2_BrodeurKoumaDataSetTableAdapters.TableAdapterManager();
             this.employesDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewtbNoEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewtbMDP = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,41 +49,13 @@
             this.dataGridViewtbTypeEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewtbRemarque = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAjouter = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.bD5B6TP2_BrodeurKoumaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employesDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // bD5B6TP2_BrodeurKoumaDataSet
-            // 
-            this.bD5B6TP2_BrodeurKoumaDataSet.DataSetName = "BD5B6TP2_BrodeurKoumaDataSet";
-            this.bD5B6TP2_BrodeurKoumaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // employesBindingSource
             // 
             this.employesBindingSource.DataMember = "Employes";
-            this.employesBindingSource.DataSource = this.bD5B6TP2_BrodeurKoumaDataSet;
-            // 
-            // employesTableAdapter
-            // 
-            this.employesTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.AbonnementsTableAdapter = null;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.DependantsTableAdapter = null;
-            this.tableAdapterManager.DepensesTableAdapter = null;
-            this.tableAdapterManager.EmployesTableAdapter = this.employesTableAdapter;
-            this.tableAdapterManager.PartiesJoueesTableAdapter = null;
-            this.tableAdapterManager.PrixDepensesAbonnementsTableAdapter = null;
-            this.tableAdapterManager.ProvincesTableAdapter = null;
-            this.tableAdapterManager.ReabonnementsTableAdapter = null;
-            this.tableAdapterManager.ServicesTableAdapter = null;
-            this.tableAdapterManager.TerrainsTableAdapter = null;
-            this.tableAdapterManager.TypesAbonnementTableAdapter = null;
-            this.tableAdapterManager.TypesEmployeTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = Projet2BD.BD5B6TP2_BrodeurKoumaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // employesDataGridView
             // 
@@ -239,7 +208,6 @@
             this.Name = "GestionEmploye";
             this.Text = "Gestion des employés";
             this.Load += new System.EventHandler(this.GestionEmploye_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.bD5B6TP2_BrodeurKoumaDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employesDataGridView)).EndInit();
             this.ResumeLayout(false);
@@ -248,10 +216,7 @@
 
         #endregion
 
-        private BD5B6TP2_BrodeurKoumaDataSet bD5B6TP2_BrodeurKoumaDataSet;
         private System.Windows.Forms.BindingSource employesBindingSource;
-        private BD5B6TP2_BrodeurKoumaDataSetTableAdapters.EmployesTableAdapter employesTableAdapter;
-        private BD5B6TP2_BrodeurKoumaDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.DataGridView employesDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewtbNoEmp;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewtbMDP;
