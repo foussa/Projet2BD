@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,10 +47,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BD5B6TP2_BrodeurKoumaDataSet.Designer.cs">
+    <Compile Include="DataClasses1.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>BD5B6TP2_BrodeurKoumaDataSet.xsd</DependentUpon>
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
     </Compile>
     <Compile Include="frmAjouterEmploye.cs">
       <SubType>Form</SubType>
@@ -80,17 +81,22 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="BD5B6TP2_BrodeurKoumaDataSet.xsc">
-      <DependentUpon>BD5B6TP2_BrodeurKoumaDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="BD5B6TP2_BrodeurKoumaDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BD5B6TP2_BrodeurKoumaDataSet.Designer.cs</LastGenOutput>
+    <None Include="DataClasses1.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClasses1.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="BD5B6TP2_BrodeurKoumaDataSet.xss">
-      <DependentUpon>BD5B6TP2_BrodeurKoumaDataSet.xsd</DependentUpon>
+    <None Include="DataClasses1.dbml.layout">
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
     </None>
+    <None Include="Properties\DataSources\Abonnements.datasource" />
+    <None Include="Properties\DataSources\Dependants.datasource" />
+    <None Include="Properties\DataSources\Depenses.datasource" />
+    <None Include="Properties\DataSources\Employes.datasource" />
+    <None Include="Properties\DataSources\PartiesJouees.datasource" />
+    <None Include="Properties\DataSources\PrixDepensesAbonnements.datasource" />
+    <None Include="Properties\DataSources\Reabonnements.datasource" />
+    <None Include="Properties\DataSources\Services.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -103,6 +109,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
