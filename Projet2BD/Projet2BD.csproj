@@ -87,6 +87,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SaisieDependant.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SaisieDependant.Designer.cs">
+      <DependentUpon>SaisieDependant.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Abonnement.resx">
+      <DependentUpon>Abonnement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAjouterEmploye.resx">
       <DependentUpon>frmAjouterEmploye.cs</DependentUpon>
     </EmbeddedResource>
@@ -108,6 +117,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SaisieDependant.resx">
+      <DependentUpon>SaisieDependant.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="DataClasses1.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>DataClasses1.designer.cs</LastGenOutput>
@@ -122,8 +134,10 @@
     <None Include="Properties\DataSources\Employes.datasource" />
     <None Include="Properties\DataSources\PartiesJouees.datasource" />
     <None Include="Properties\DataSources\PrixDepensesAbonnements.datasource" />
+    <None Include="Properties\DataSources\Provinces.datasource" />
     <None Include="Properties\DataSources\Reabonnements.datasource" />
     <None Include="Properties\DataSources\Services.datasource" />
+    <None Include="Properties\DataSources\TypesAbonnement.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
