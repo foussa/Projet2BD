@@ -36,6 +36,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -93,6 +94,7 @@
     <Compile Include="SaisieDependant.Designer.cs">
       <DependentUpon>SaisieDependant.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sexe.cs" />
     <EmbeddedResource Include="Abonnement.resx">
       <DependentUpon>Abonnement.cs</DependentUpon>
     </EmbeddedResource>
@@ -137,6 +139,7 @@
     <None Include="Properties\DataSources\Provinces.datasource" />
     <None Include="Properties\DataSources\Reabonnements.datasource" />
     <None Include="Properties\DataSources\Services.datasource" />
+    <None Include="Properties\DataSources\Sexe.datasource" />
     <None Include="Properties\DataSources\TypesAbonnement.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
