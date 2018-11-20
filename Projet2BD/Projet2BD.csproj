@@ -48,11 +48,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Abonnement.cs">
+    <Compile Include="RenouvellerAbonnement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Abonnement.Designer.cs">
-      <DependentUpon>Abonnement.cs</DependentUpon>
+    <Compile Include="RenouvellerAbonnement.Designer.cs">
+      <DependentUpon>RenouvellerAbonnement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AjouterAbonnement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AjouterAbonnement.Designer.cs">
+      <DependentUpon>AjouterAbonnement.cs</DependentUpon>
     </Compile>
     <Compile Include="DataClasses1.cs">
       <DependentUpon>DataClasses1.dbml</DependentUpon>
@@ -95,8 +101,8 @@
       <DependentUpon>SaisieDependant.cs</DependentUpon>
     </Compile>
     <Compile Include="Sexe.cs" />
-    <EmbeddedResource Include="Abonnement.resx">
-      <DependentUpon>Abonnement.cs</DependentUpon>
+    <EmbeddedResource Include="AjouterAbonnement.resx">
+      <DependentUpon>AjouterAbonnement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAjouterEmploye.resx">
       <DependentUpon>frmAjouterEmploye.cs</DependentUpon>
@@ -119,6 +125,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RenouvellerAbonnement.resx">
+      <DependentUpon>RenouvellerAbonnement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SaisieDependant.resx">
       <DependentUpon>SaisieDependant.cs</DependentUpon>
     </EmbeddedResource>

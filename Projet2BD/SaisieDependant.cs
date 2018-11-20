@@ -88,7 +88,7 @@ namespace Projet2BD
             }
             else
             {
-                if (age < 1 && age > 17)
+                if (age < 1 || age > 17)
                 {
                     errMessage.SetError(dtpDateNaissance, "Chaque enfant doit avoir moins que 18 ans (mais plus que 0 ans)");
                     e.Cancel = true;

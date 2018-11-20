@@ -18,17 +18,10 @@ namespace Projet2BD
                 Connexion connexion = new Connexion();
                 Application.Run(connexion);
 
-                if (connexion.reussi)
-                {
-                    MenuPrincipal menuPrincipal = new MenuPrincipal();
-                    menuPrincipal.noEmploye = connexion.noEmploye;
-                    menuPrincipal.noTypeEmploye = connexion.noTypeEmploye;
-                    Application.Run(menuPrincipal);
-                }
+                if (connexion.Reussi)
+                    Application.Run(new MenuPrincipal(connexion.NoEmploye, connexion.NoTypeEmploye));
                 else
-                {
                     quitter = true;
-                }
             }
         }
     }

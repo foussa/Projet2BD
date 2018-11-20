@@ -1,18 +1,20 @@
 ﻿using System;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Projet2BD
 {
     public partial class MenuPrincipal : Form
     {
-        public int noEmploye;
-        public int noTypeEmploye;
+        private int noEmploye;
+        private int noTypeEmploye;
+        private DataClasses1DataContext dataContext = new DataClasses1DataContext();
 
-        DataClasses1DataContext dataContext = new DataClasses1DataContext();
-
-        public MenuPrincipal()
+        public MenuPrincipal(int noEmploye, int noTypeEmploye)
         {
             InitializeComponent();
+            this.noEmploye = noEmploye;
+            this.noTypeEmploye = noTypeEmploye;
         }
 
         private void MenuPrincipal_Load(object sender, EventArgs e)
@@ -75,12 +77,22 @@ namespace Projet2BD
 
         private void btnAjouterAbonnement_Click(object sender, EventArgs e)
         {
-            new Abonnement().ShowDialog();
+            new AjouterAbonnement().ShowDialog();
         }
 
         private void btnRenouvellerAbonnement_Click(object sender, EventArgs e)
         {
-
+            if ((from abonnement in dataContext.Abonnements
+                 where !abonnement.Reabonnements.Any()
+                 where DateTime.Today > abonnement.DateAbonnement.AddYears(1)
+                 select abonnement).Union(from abonnement in dataContext.Abonnements
+                                          where abonnement.Reabonnements.Any()
+                                          where abonnement.Reabonnements.All(reabonnement =>
+                                          DateTime.Today > reabonnement.DateRenouvellement.AddYears(1))
+                                          select abonnement).Any())
+                new RenouvellerAbonnement().ShowDialog();
+            else
+                MessageBox.Show("Aucun abonnement ne peut être renouvelé.", "Renouvellement");
         }
 
         private void btnMettreAJourAbonnés_Click(object sender, EventArgs e)

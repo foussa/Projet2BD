@@ -10,20 +10,19 @@ using System.Windows.Forms;
 
 namespace Projet2BD
 {
-    public partial class Abonnement : Form
+    public partial class AjouterAbonnement : Form
     {
         private List<Control> lstControlesDynamiques = new List<Control>();
+        private DataClasses1DataContext dataContext = new DataClasses1DataContext();
 
-        DataClasses1DataContext dataContext = new DataClasses1DataContext();    
-
-        public Abonnement()
+        public AjouterAbonnement()
         {
             InitializeComponent();
         }
 
         private void Abonnement_Load(object sender, EventArgs e)
         {
-            ClientSize = new Size(367, 468);
+            ClientSize = new Size(368, 468);
 
             List<Sexe> sexes = new List<Sexe>();
             sexes.Add(new Sexe("H", "Homme"));
@@ -50,48 +49,48 @@ namespace Projet2BD
                 case 2:
                     lblRemarque.Top = 352;
                     tbRemarque.Top = 349;
-                    btnAjouter.Location = new Point(113, 414);
+                    btnAjouterAbonnement.Location = new Point(113, 414);
 
-                    ClientSize = new Size(367, 468);
+                    ClientSize = new Size(368, 468);
 
                     break;
                 case 3:
                     lblRemarque.Top = 352;
                     tbRemarque.Top = 349;
-                    btnAjouter.Location = new Point(281, 414);
+                    btnAjouterAbonnement.Location = new Point(281, 414);
 
-                    lstControlesDynamiques.Add(new SaisieDependant(362, 20, 0));
+                    lstControlesDynamiques.Add(new SaisieDependant(363, 20, 0));
 
-                    ClientSize = new Size(703, 468);
+                    ClientSize = new Size(704, 468);
 
                     break;
                 case 4:
                     lblRemarque.Top = 352;
                     tbRemarque.Top = 349;
-                    btnAjouter.Location = new Point(281, 414);
+                    btnAjouterAbonnement.Location = new Point(281, 414);
 
-                    lstControlesDynamiques.Add(new SaisieDependant(362, 20, 0));
-                    lstControlesDynamiques.Add(new SaisieDependant(362, 223, 1));
+                    lstControlesDynamiques.Add(new SaisieDependant(363, 20, 0));
+                    lstControlesDynamiques.Add(new SaisieDependant(363, 223, 1));
 
-                    ClientSize = new Size(703, 468);
+                    ClientSize = new Size(704, 468);
 
                     break;
                 case 5:
                     lblRemarque.Top = 352;
                     tbRemarque.Top = 349;
-                    btnAjouter.Location = new Point(449, 414);
+                    btnAjouterAbonnement.Location = new Point(449, 414);
 
-                    lstControlesDynamiques.Add(new SaisieDependant(362, 20, 0));
-                    lstControlesDynamiques.Add(new SaisieDependant(698, 20, 1));
-                    lstControlesDynamiques.Add(new SaisieDependant(362, 223, 2));
+                    lstControlesDynamiques.Add(new SaisieDependant(363, 20, 0));
+                    lstControlesDynamiques.Add(new SaisieDependant(699, 20, 1));
+                    lstControlesDynamiques.Add(new SaisieDependant(363, 223, 2));
 
-                    ClientSize = new Size(1039, 468);
+                    ClientSize = new Size(1040, 468);
 
                     break;
                 case 6:
                     lblRemarque.Top = 378;
                     tbRemarque.Top = 375;
-                    btnAjouter.Location = new Point(617, 440);
+                    btnAjouterAbonnement.Location = new Point(617, 440);
 
                     NumericUpDown numNbEnfants = new NumericUpDown();
                     numNbEnfants.Name = "numNbEnfants";
@@ -100,7 +99,7 @@ namespace Projet2BD
                     numNbEnfants.Maximum = 9;
                     numNbEnfants.ValueChanged += new EventHandler(numNbEnfants_ValueChanged);
                     numNbEnfants.Size = new Size(50, 20);
-                    numNbEnfants.Location = new Point(132, 349);
+                    numNbEnfants.Location = new Point(133, 349);
 
                     Label lblNbEnfants = new Label();
                     lblNbEnfants.Name = "lblNbEnfants";
@@ -108,12 +107,12 @@ namespace Projet2BD
                     lblNbEnfants.Location = new Point(30, 351);
                     lstControlesDynamiques.Add(lblNbEnfants);
                     lstControlesDynamiques.Add(numNbEnfants);
-                    lstControlesDynamiques.Add(new SaisieDependant(362, 20, 0));
-                    lstControlesDynamiques.Add(new SaisieDependant(698, 20, 1));
-                    lstControlesDynamiques.Add(new SaisieDependant(1034, 20, 2));
-                    lstControlesDynamiques.Add(new SaisieDependant(362, 249, 3));
+                    lstControlesDynamiques.Add(new SaisieDependant(363, 20, 0));
+                    lstControlesDynamiques.Add(new SaisieDependant(699, 20, 1));
+                    lstControlesDynamiques.Add(new SaisieDependant(1035, 20, 2));
+                    lstControlesDynamiques.Add(new SaisieDependant(363, 249, 3));
 
-                    ClientSize = new Size(1375, 494);
+                    ClientSize = new Size(1376, 494);
 
                     break;
             }
@@ -137,50 +136,50 @@ namespace Projet2BD
 
             decimal nbEnfants = ((NumericUpDown)Controls.Find("numNbEnfants", false).Single()).Value;
 
-            lstControlesDynamiques.Add(new SaisieDependant(362, 20, 0));
-            lstControlesDynamiques.Add(new SaisieDependant(698, 20, 1));
-            lstControlesDynamiques.Add(new SaisieDependant(1034, 20, 2));
-            lstControlesDynamiques.Add(new SaisieDependant(362, 249, 3));
+            lstControlesDynamiques.Add(new SaisieDependant(363, 20, 0));
+            lstControlesDynamiques.Add(new SaisieDependant(699, 20, 1));
+            lstControlesDynamiques.Add(new SaisieDependant(1035, 20, 2));
+            lstControlesDynamiques.Add(new SaisieDependant(363, 249, 3));
 
             if (nbEnfants > 3)
             {
-                lstControlesDynamiques.Add(new SaisieDependant(698, 249, 4));
+                lstControlesDynamiques.Add(new SaisieDependant(699, 249, 4));
 
                 if (nbEnfants > 4)
                 {
-                    lstControlesDynamiques.Add(new SaisieDependant(1034, 249, 5));
+                    lstControlesDynamiques.Add(new SaisieDependant(1035, 249, 5));
 
                     if (nbEnfants > 5)
                     {
-                        btnAjouter.Location = new Point(617, 669);
+                        btnAjouterAbonnement.Location = new Point(617, 669);
 
                         lstControlesDynamiques.Add(new SaisieDependant(20, 478, 6));
 
                         if (nbEnfants > 6)
                         {
-                            lstControlesDynamiques.Add(new SaisieDependant(362, 478, 7));
+                            lstControlesDynamiques.Add(new SaisieDependant(363, 478, 7));
 
                             if (nbEnfants > 7)
                             {
-                                lstControlesDynamiques.Add(new SaisieDependant(698, 478, 8));
+                                lstControlesDynamiques.Add(new SaisieDependant(699, 478, 8));
 
                                 if (nbEnfants > 8)
-                                    lstControlesDynamiques.Add(new SaisieDependant(1034, 478, 9));
+                                    lstControlesDynamiques.Add(new SaisieDependant(1035, 478, 9));
                             }
                         }
 
-                        ClientSize = new Size(1375, 723);
+                        ClientSize = new Size(1376, 723);
                     }
                     else
                     {
-                        btnAjouter.Location = new Point(617, 440);
+                        btnAjouterAbonnement.Location = new Point(617, 440);
 
-                        ClientSize = new Size(1375, 494);
+                        ClientSize = new Size(1376, 494);
                     }
                 }
             }
             else
-                ClientSize = new Size(1375, 494);
+                ClientSize = new Size(1376, 494);
 
             foreach (Control controle in lstControlesDynamiques)
                 if (controle is SaisieDependant)
@@ -348,7 +347,7 @@ namespace Projet2BD
             errMessage.SetError(tbCourriel, string.Empty);
         }
 
-        private void btnAjouter_Click(object sender, EventArgs e)
+        private void btnAjouterAbonnement_Click(object sender, EventArgs e)
         {
             if (ValidateChildren())
             {
@@ -386,7 +385,7 @@ namespace Projet2BD
                     }
                     catch
                     {
-                        MessageBox.Show("L'abonnement n'a pas été enregistré dans la base de données.", "Enregistrement");
+                        MessageBox.Show("Une erreur est survenue. L'abonnement n'a pas été enregistré dans la base de données.", "Enregistrement");
                     }
                 }
 

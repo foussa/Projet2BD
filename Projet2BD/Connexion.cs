@@ -1,16 +1,17 @@
 ﻿using System;
 using System.Data;
 using System.Linq;
-using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace Projet2BD
 {
     public partial class Connexion : Form
     {
-        public bool reussi = false;
-        public int noEmploye;
-        public int noTypeEmploye;
+        private int noEmploye;
+
+        public bool Reussi { get; private set; } = false;
+        public int NoEmploye { get { return noEmploye; } private set { noEmploye = value; } }
+        public int NoTypeEmploye { get; private set; }
 
         DataClasses1DataContext dataContext = new DataClasses1DataContext();
 
@@ -34,7 +35,7 @@ namespace Projet2BD
                 MessageBox.Show("Le numéro d'employe ne peut contenir que des chiffres.");
                 tbNomUtilisateur.Focus();
             }
-            else if (!dataContext.Employes.Any(employe => employe.No == noEmploye))
+            else if (!dataContext.Employes.Any(employe => employe.No == NoEmploye))
             {
                 tbNomUtilisateur.Clear();
                 tbMotDePasse.Clear();
@@ -48,7 +49,7 @@ namespace Projet2BD
             }
             else
             {
-                var employe = dataContext.Employes.Where(emp => emp.No == noEmploye).Single();
+                var employe = dataContext.Employes.Where(emp => emp.No == NoEmploye).Single();
 
                 if (employe.MotDePasse != strMotDePasse)
                 {
@@ -58,8 +59,8 @@ namespace Projet2BD
                 }
                 else
                 {
-                    reussi = true;
-                    noTypeEmploye = employe.NoTypeEmploye;
+                    Reussi = true;
+                    NoTypeEmploye = employe.NoTypeEmploye;
 
                     Close();
                 }
