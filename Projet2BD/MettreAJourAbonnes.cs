@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Linq;
 using System.Linq;
 using System.Text.RegularExpressions;
+using System.Transactions;
 using System.Windows.Forms;
 
 namespace Projet2BD
@@ -59,21 +61,101 @@ namespace Projet2BD
         {
             dgAbonnes.Rows[e.RowIndex].ErrorText = "";
 
-            if (dgAbonnes.Columns[e.ColumnIndex].Name == "tbCodePostal_dgAbonnes")
+            if (dgAbonnes.Columns[e.ColumnIndex].Name == "tbPrenom_dgAbonnes")
             {
-                Regex exprCodePostal = new Regex("^[a-zA-Z]\\d[a-zA-Z] ?\\d[a-zA-Z]\\d$");
-                if (!exprCodePostal.IsMatch(e.FormattedValue.ToString()))
+                if (string.IsNullOrEmpty(e.FormattedValue.ToString().Trim()))
                 {
-                    dgAbonnes.Rows[e.RowIndex].ErrorText = "Le code postal doit respecter le format @#@ #@# ou @#@#@#";
+                    dgAbonnes.Rows[e.RowIndex].ErrorText = "Le prénom ne peut pas être vide";
                     e.Cancel = true;
+                }
+            }
+            else if (dgAbonnes.Columns[e.ColumnIndex].Name == "tbNoCivique_dgAbonnes")
+            {
+                if (string.IsNullOrEmpty(e.FormattedValue.ToString().Trim()))
+                {
+                    dgAbonnes.Rows[e.RowIndex].ErrorText = "Le numéro civique ne peut pas être vide";
+                    e.Cancel = true;
+                }
+                else
+                {
+                    try
+                    {
+                        int.Parse(e.FormattedValue.ToString().Trim());
+                    }
+                    catch
+                    {
+                        dgAbonnes.Rows[e.RowIndex].ErrorText = "Le numéro civique doit être un nombre entier";
+                        e.Cancel = true;
+                    }
+                }
+            }
+            else if (dgAbonnes.Columns[e.ColumnIndex].Name == "tbRue_dgAbonnes")
+            {
+                if (string.IsNullOrEmpty(e.FormattedValue.ToString().Trim()))
+                {
+                    dgAbonnes.Rows[e.RowIndex].ErrorText = "La rue ne peut pas être vide";
+                    e.Cancel = true;
+                }
+            }
+            else if (dgAbonnes.Columns[e.ColumnIndex].Name == "tbVille_dgAbonnes")
+            {
+                if (string.IsNullOrEmpty(e.FormattedValue.ToString().Trim()))
+                {
+                    dgAbonnes.Rows[e.RowIndex].ErrorText = "La ville ne peut pas être vide";
+                    e.Cancel = true;
+                }
+            }
+            else if (dgAbonnes.Columns[e.ColumnIndex].Name == "tbCodePostal_dgAbonnes")
+            {
+                if (string.IsNullOrEmpty(e.FormattedValue.ToString().Trim()))
+                {
+                    dgAbonnes.Rows[e.RowIndex].ErrorText = "Le code postal ne peut pas être vide";
+                    e.Cancel = true;
+                }
+                else
+                {
+                    Regex exprCodePostal = new Regex("^[a-zA-Z]\\d[a-zA-Z] ?\\d[a-zA-Z]\\d$");
+                    if (!exprCodePostal.IsMatch(e.FormattedValue.ToString()))
+                    {
+                        dgAbonnes.Rows[e.RowIndex].ErrorText = "Le code postal doit respecter le format @#@ #@# ou @#@#@#";
+                        e.Cancel = true;
+                    }
                 }
             }
             else if (dgAbonnes.Columns[e.ColumnIndex].Name == "tbTelephone_dgAbonnes")
             {
-                Regex exprTelephone = new Regex("^(\\(\\d{3}\\) \\d{3}-\\d{4}|\\d{3}-\\d{3}-\\d{4}|\\d{10})$");
-                if (!exprTelephone.IsMatch(e.FormattedValue.ToString()))
+                if (string.IsNullOrEmpty(e.FormattedValue.ToString().Trim()))
                 {
-                    dgAbonnes.Rows[e.RowIndex].ErrorText = "Le téléphone doit respecter le format (###) ###-### ou ###-###-#### ou ##########";
+                    dgAbonnes.Rows[e.RowIndex].ErrorText = "Le téléphone ne peut pas être vide";
+                    e.Cancel = true;
+                }
+                else
+                {
+                    Regex exprTelephone = new Regex("^(\\(\\d{3}\\) ?\\d{3}-\\d{4}|\\d{3}-\\d{3}-\\d{4}|\\d{10})$");
+                    if (!exprTelephone.IsMatch(e.FormattedValue.ToString()))
+                    {
+                        dgAbonnes.Rows[e.RowIndex].ErrorText = "Le téléphone doit respecter le format (###) ###-### ou (###)###-### ou ###-###-#### ou ##########";
+                        e.Cancel = true;
+                    }
+                }
+            }
+            else if (dgAbonnes.Columns[e.ColumnIndex].Name == "tbCellulaire_dgAbonnes")
+            {
+                if (!string.IsNullOrEmpty(e.FormattedValue.ToString().Trim()))
+                {
+                    Regex exprTelephone = new Regex("^(\\(\\d{3}\\) \\d{3}-\\d{4}|\\d{3}-\\d{3}-\\d{4}|\\d{10})$");
+                    if (!exprTelephone.IsMatch(e.FormattedValue.ToString()))
+                    {
+                        dgAbonnes.Rows[e.RowIndex].ErrorText = "Le cellulaire doit respecter le format (###) ###-### ou (###)###-### ou ###-###-#### ou ##########";
+                        e.Cancel = true;
+                    }
+                }
+            }
+            else if (dgAbonnes.Columns[e.ColumnIndex].Name == "tbCourriel_dgAbonnes")
+            {
+                if (string.IsNullOrEmpty(e.FormattedValue.ToString().Trim()))
+                {
+                    dgAbonnes.Rows[e.RowIndex].ErrorText = "Le courriel ne peut pas être vide";
                     e.Cancel = true;
                 }
             }
@@ -106,6 +188,11 @@ namespace Projet2BD
                         e.Value = e.Value.ToString().Remove(3, 1).Remove(6, 1);
                         e.ParsingApplied = true;
                     }
+                    else if (e.Value.ToString().Count() == 13)
+                    {
+                        e.Value = e.Value.ToString().Remove(0, 1).Remove(3, 1).Remove(6, 1);
+                        e.ParsingApplied = true;
+                    }
                     else if (e.Value.ToString().Count() == 14)
                     {
                         e.Value = e.Value.ToString().Remove(0, 1).Remove(3, 2).Remove(6, 1);
@@ -122,7 +209,24 @@ namespace Projet2BD
 
         private void dgDependants_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
         {
+            dgAbonnes.Rows[e.RowIndex].ErrorText = "";
 
+            if (dgAbonnes.Columns[e.ColumnIndex].Name == "tbPrenom_dgDependants")
+            {
+                if (string.IsNullOrEmpty(e.FormattedValue.ToString().Trim()))
+                {
+                    dgAbonnes.Rows[e.RowIndex].ErrorText = "Le prénom ne peut pas être vide";
+                    e.Cancel = true;
+                }
+            }
+            else if (dgAbonnes.Columns[e.ColumnIndex].Name == "tbNom_dgDependants")
+            {
+                if (string.IsNullOrEmpty(e.FormattedValue.ToString().Trim()))
+                {
+                    dgAbonnes.Rows[e.RowIndex].ErrorText = "Le nom ne peut pas être vide";
+                    e.Cancel = true;
+                }
+            }
         }
 
         private void dgDependants_CellEndEdit(object sender, DataGridViewCellEventArgs e)
@@ -132,7 +236,23 @@ namespace Projet2BD
 
         private void btnMettreAJourAbonnes_Click(object sender, EventArgs e)
         {
-
+            using (TransactionScope transaction = new TransactionScope())
+            {
+                try
+                {
+                    dataContext.SubmitChanges(ConflictMode.ContinueOnConflict);
+                    transaction.Complete();
+                    MessageBox.Show("Les modifications ont été enregistrés dans la base de données.", "Enregistrement des données");
+                }
+                catch (ChangeConflictException)
+                {
+                    dataContext.ChangeConflicts.ResolveAll(RefreshMode.KeepChanges);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Erreur lors de l'enregistrement des données");
+                }
+            }
         }
     }
 }
