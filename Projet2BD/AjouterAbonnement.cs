@@ -374,18 +374,19 @@ namespace Projet2BD
                     if (controle is SaisieDependant)
                         abonnement.Dependants.Add(((SaisieDependant)controle).creerDependant(abonnement.Id));
 
+                dataContext.Abonnements.InsertOnSubmit(abonnement);
+
                 using (TransactionScope transaction = new TransactionScope())
                 {
                     try
                     {
-                        dataContext.Abonnements.InsertOnSubmit(abonnement);
                         dataContext.SubmitChanges();
                         transaction.Complete();
-                        MessageBox.Show("L'abonnement a été enregistré dans la base de données.", "Enregistrement");
+                        MessageBox.Show("L'abonnement a été enregistré dans la base de données.", "Enregistrement des données");
                     }
-                    catch
+                    catch (Exception ex)
                     {
-                        MessageBox.Show("Une erreur est survenue. L'abonnement n'a pas été enregistré dans la base de données.", "Enregistrement");
+                        MessageBox.Show(ex.Message, "Erreur lors de l'enregistrement des données");
                     }
                 }
 

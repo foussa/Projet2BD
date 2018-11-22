@@ -25,7 +25,7 @@ namespace Projet2BD
                     btnGererEmployes.Enabled = true;
                     btnAjouterAbonnement.Enabled = true;
                     btnRenouvellerAbonnement.Enabled = true;
-                    btnMettreAJourAbonnés.Enabled = true;
+                    btnMettreAJourAbonnes.Enabled = true;
                     btnModifierPrixEtDepensesObligatoires.Enabled = true;
                     btnInscrirePartie.Enabled = true;
                     btnVisualiserRapports.Enabled = true;
@@ -40,7 +40,7 @@ namespace Projet2BD
                 case 3:
                     btnAjouterAbonnement.Enabled = true;
                     btnRenouvellerAbonnement.Enabled = true;
-                    btnMettreAJourAbonnés.Enabled = true;
+                    btnMettreAJourAbonnes.Enabled = true;
                     btnModifierPrixEtDepensesObligatoires.Enabled = true;
                     btnInscrirePartie.Enabled = true;
                     btnVisualiserRapports.Enabled = true;
@@ -49,7 +49,7 @@ namespace Projet2BD
                 case 4:
                     btnAjouterAbonnement.Enabled = true;
                     btnRenouvellerAbonnement.Enabled = true;
-                    btnMettreAJourAbonnés.Enabled = true;
+                    btnMettreAJourAbonnes.Enabled = true;
                     btnInscrirePartie.Enabled = true;
                     break;
                 case 5:
@@ -95,9 +95,10 @@ namespace Projet2BD
                 MessageBox.Show("Aucun abonnement ne peut être renouvelé.", "Renouvellement");
         }
 
-        private void btnMettreAJourAbonnés_Click(object sender, EventArgs e)
+        private void btnMettreAJourAbonnes_Click(object sender, EventArgs e)
         {
-
+            if (dataContext.Abonnements.Any())
+                new MettreAJourAbonnes().ShowDialog();
         }
 
         private void btnModifierPrixEtDepensesObligatoires_Click(object sender, EventArgs e)

@@ -48,6 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MettreAJourAbonnes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MettreAJourAbonnes.Designer.cs">
+      <DependentUpon>MettreAJourAbonnes.cs</DependentUpon>
+    </Compile>
     <Compile Include="RenouvellerAbonnement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +121,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GestionEmploye.resx">
       <DependentUpon>GestionEmploye.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MettreAJourAbonnes.resx">
+      <DependentUpon>MettreAJourAbonnes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

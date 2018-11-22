@@ -35,9 +35,18 @@ namespace Projet2BD
             if (!string.IsNullOrEmpty(tbRemarque.Text.Trim())) reabonnement.Remarque = tbRemarque.Text.Trim();
 
             dataContext.Reabonnements.InsertOnSubmit(reabonnement);
-            dataContext.SubmitChanges();
 
-            MessageBox.Show("L'abonnement a été renouvellé.", "Renouvellement");
+            try
+            {
+                dataContext.SubmitChanges();
+                MessageBox.Show("Le réabonnement a été enregistré dans la base de données.", "Enregistrement des données");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Erreur lors de l'enregistrement des données");
+            }
+
+            Close();
         }
     }
 }
