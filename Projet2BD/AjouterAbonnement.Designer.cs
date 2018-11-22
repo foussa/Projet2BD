@@ -359,6 +359,16 @@
             // numNoCivique
             // 
             this.numNoCivique.Location = new System.Drawing.Point(133, 147);
+            this.numNoCivique.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
+            this.numNoCivique.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numNoCivique.Name = "numNoCivique";
             this.numNoCivique.Size = new System.Drawing.Size(50, 20);
             this.numNoCivique.TabIndex = 4;

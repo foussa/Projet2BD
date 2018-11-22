@@ -39,10 +39,9 @@
             // 
             this.lblNomUtilisateur.AutoSize = true;
             this.lblNomUtilisateur.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomUtilisateur.Location = new System.Drawing.Point(20, 20);
-            this.lblNomUtilisateur.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNomUtilisateur.Location = new System.Drawing.Point(20, 21);
             this.lblNomUtilisateur.Name = "lblNomUtilisateur";
-            this.lblNomUtilisateur.Size = new System.Drawing.Size(122, 18);
+            this.lblNomUtilisateur.Size = new System.Drawing.Size(103, 15);
             this.lblNomUtilisateur.TabIndex = 0;
             this.lblNomUtilisateur.Text = "Nom d\'utilisateur:";
             // 
@@ -50,58 +49,53 @@
             // 
             this.lblMotDePasse.AutoSize = true;
             this.lblMotDePasse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMotDePasse.Location = new System.Drawing.Point(20, 63);
-            this.lblMotDePasse.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMotDePasse.Location = new System.Drawing.Point(39, 47);
             this.lblMotDePasse.Name = "lblMotDePasse";
-            this.lblMotDePasse.Size = new System.Drawing.Size(102, 18);
+            this.lblMotDePasse.Size = new System.Drawing.Size(84, 15);
             this.lblMotDePasse.TabIndex = 1;
             this.lblMotDePasse.Text = "Mot de passe:";
             // 
             // tbNomUtilisateur
             // 
-            this.tbNomUtilisateur.Location = new System.Drawing.Point(177, 18);
-            this.tbNomUtilisateur.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbNomUtilisateur.Location = new System.Drawing.Point(129, 20);
             this.tbNomUtilisateur.MaxLength = 50;
             this.tbNomUtilisateur.Name = "tbNomUtilisateur";
-            this.tbNomUtilisateur.Size = new System.Drawing.Size(132, 22);
+            this.tbNomUtilisateur.Size = new System.Drawing.Size(100, 20);
             this.tbNomUtilisateur.TabIndex = 0;
             // 
             // tbMotDePasse
             // 
-            this.tbMotDePasse.Location = new System.Drawing.Point(177, 62);
-            this.tbMotDePasse.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbMotDePasse.Location = new System.Drawing.Point(129, 46);
             this.tbMotDePasse.MaxLength = 50;
             this.tbMotDePasse.Name = "tbMotDePasse";
-            this.tbMotDePasse.Size = new System.Drawing.Size(132, 22);
+            this.tbMotDePasse.Size = new System.Drawing.Size(100, 20);
             this.tbMotDePasse.TabIndex = 1;
             this.tbMotDePasse.UseSystemPasswordChar = true;
             // 
             // btnConnexion
             // 
             this.btnConnexion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConnexion.Location = new System.Drawing.Point(99, 111);
-            this.btnConnexion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnConnexion.Location = new System.Drawing.Point(67, 81);
             this.btnConnexion.Name = "btnConnexion";
-            this.btnConnexion.Size = new System.Drawing.Size(133, 42);
+            this.btnConnexion.Size = new System.Drawing.Size(115, 34);
             this.btnConnexion.TabIndex = 2;
             this.btnConnexion.Text = "Se connecter";
             this.btnConnexion.UseVisualStyleBackColor = true;
             this.btnConnexion.Click += new System.EventHandler(this.btnConnexion_Click);
             // 
-            // FrmConnexion
+            // Connexion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(328, 169);
+            this.ClientSize = new System.Drawing.Size(249, 135);
             this.Controls.Add(this.btnConnexion);
             this.Controls.Add(this.tbMotDePasse);
             this.Controls.Add(this.tbNomUtilisateur);
             this.Controls.Add(this.lblMotDePasse);
             this.Controls.Add(this.lblNomUtilisateur);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
-            this.Name = "FrmConnexion";
+            this.Name = "Connexion";
             this.ShowIcon = false;
             this.Text = "Connexion";
             this.ResumeLayout(false);

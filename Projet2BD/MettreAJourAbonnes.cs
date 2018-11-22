@@ -26,6 +26,13 @@ namespace Projet2BD
             provincesBindingSource.DataSource = dataContext.Provinces;
             typesAbonnementBindingSource.DataSource = dataContext.TypesAbonnement;
             abonnementsBindingSource.DataSource = dataContext.Abonnements;
+            dependantsBindingSource.DataSource = ((Abonnements)abonnementsBindingSource.Current).Dependants;
+        }
+
+
+        private void dgAbonnes_SelectionChanged(object sender, EventArgs e)
+        {
+            dependantsBindingSource.DataSource = ((Abonnements)abonnementsBindingSource.Current).Dependants;
         }
 
         private void dgAbonnes_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -111,6 +118,21 @@ namespace Projet2BD
         private void dgAbonnes_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             dgAbonnes.Rows[e.RowIndex].ErrorText = "";
+        }
+
+        private void dgDependants_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+        {
+
+        }
+
+        private void dgDependants_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            dgDependants.Rows[e.RowIndex].ErrorText = "";
+        }
+
+        private void btnMettreAJourAbonnes_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
