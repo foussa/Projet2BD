@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -41,34 +42,33 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
             this.abonnementsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dgAbonnes = new System.Windows.Forms.DataGridView();
+            this.tbId_dgAbonnes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tbDateAbonnement_dgAbonnes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tbNom_dgAbonnes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tbPrenom_dgAbonnes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ddlSexes_dgAbonnes = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.sexeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tbDateNaissance_dgAbonnes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tbNoCivique_dgAbonnes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tbRue_dgAbonnes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tbVille_dgAbonnes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ddlProvinces_dgAbonnes = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.provincesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tbCodePostal_dgAbonnes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tbTelephone_dgAbonnes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tbCellulaire_dgAbonnes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tbCourriel_dgAbonnes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ddlTypesAbonnement_dgAbonnes = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.typesAbonnementBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tbRemarque_dgAbonnes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblAbonnes = new System.Windows.Forms.Label();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblDependants = new System.Windows.Forms.Label();
             this.dependantsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dgDependants = new System.Windows.Forms.DataGridView();
-            this.btnMettreAJourAbonnes = new System.Windows.Forms.Button();
-            this.tbId_dgAbonnes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tbDateAbonnement_dgAbonnes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tbNom_dgAbonnes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tbPrenom_dgAbonnes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ddlSexes_dgAbonnes = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.tbDateNaissance_dgAbonnes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tbNoCivique_dgAbonnes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tbRue_dgAbonnes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tbVille_dgAbonnes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ddlProvinces_dgAbonnes = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.tbCodePostal_dgAbonnes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tbTelephone_dgAbonnes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tbCellulaire_dgAbonnes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tbCourriel_dgAbonnes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ddlTypesAbonnement_dgAbonnes = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.tbRemarque_dgAbonnes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbId_dgDependants = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbNom_dgDependants = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbPrenom_dgDependants = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -76,14 +76,14 @@
             this.tbDateNaissance_dgDependants = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbIdAbonnement_dgDependants = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbRemarque_dgDependants = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sexeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnMettreAJourAbonnes = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.abonnementsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgAbonnes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sexeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.provincesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.typesAbonnementBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dependantsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgDependants)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sexeBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // abonnementsBindingSource
@@ -127,13 +127,187 @@
             this.dgAbonnes.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.dgAbonnes_CellValidating);
             this.dgAbonnes.SelectionChanged += new System.EventHandler(this.dgAbonnes_SelectionChanged);
             // 
+            // tbId_dgAbonnes
+            // 
+            this.tbId_dgAbonnes.DataPropertyName = "Id";
+            this.tbId_dgAbonnes.FillWeight = 75F;
+            this.tbId_dgAbonnes.HeaderText = "Id";
+            this.tbId_dgAbonnes.Name = "tbId_dgAbonnes";
+            this.tbId_dgAbonnes.ReadOnly = true;
+            // 
+            // tbDateAbonnement_dgAbonnes
+            // 
+            this.tbDateAbonnement_dgAbonnes.DataPropertyName = "DateAbonnement";
+            dataGridViewCellStyle27.Format = "D";
+            dataGridViewCellStyle27.NullValue = null;
+            this.tbDateAbonnement_dgAbonnes.DefaultCellStyle = dataGridViewCellStyle27;
+            this.tbDateAbonnement_dgAbonnes.FillWeight = 125F;
+            this.tbDateAbonnement_dgAbonnes.HeaderText = "Date d\'abonnement";
+            this.tbDateAbonnement_dgAbonnes.Name = "tbDateAbonnement_dgAbonnes";
+            this.tbDateAbonnement_dgAbonnes.ReadOnly = true;
+            // 
+            // tbNom_dgAbonnes
+            // 
+            this.tbNom_dgAbonnes.DataPropertyName = "Nom";
+            dataGridViewCellStyle28.Format = "D";
+            dataGridViewCellStyle28.NullValue = null;
+            this.tbNom_dgAbonnes.DefaultCellStyle = dataGridViewCellStyle28;
+            this.tbNom_dgAbonnes.FillWeight = 75F;
+            this.tbNom_dgAbonnes.HeaderText = "Nom";
+            this.tbNom_dgAbonnes.Name = "tbNom_dgAbonnes";
+            this.tbNom_dgAbonnes.ReadOnly = true;
+            // 
+            // tbPrenom_dgAbonnes
+            // 
+            this.tbPrenom_dgAbonnes.DataPropertyName = "Prenom";
+            dataGridViewCellStyle29.Format = "D";
+            dataGridViewCellStyle29.NullValue = null;
+            this.tbPrenom_dgAbonnes.DefaultCellStyle = dataGridViewCellStyle29;
+            this.tbPrenom_dgAbonnes.FillWeight = 75F;
+            this.tbPrenom_dgAbonnes.HeaderText = "Prénom";
+            this.tbPrenom_dgAbonnes.MaxInputLength = 50;
+            this.tbPrenom_dgAbonnes.Name = "tbPrenom_dgAbonnes";
+            // 
+            // ddlSexes_dgAbonnes
+            // 
+            this.ddlSexes_dgAbonnes.DataPropertyName = "Sexe";
+            this.ddlSexes_dgAbonnes.DataSource = this.sexeBindingSource;
+            this.ddlSexes_dgAbonnes.DisplayMember = "Nom";
+            this.ddlSexes_dgAbonnes.FillWeight = 75F;
+            this.ddlSexes_dgAbonnes.HeaderText = "Sexe";
+            this.ddlSexes_dgAbonnes.Name = "ddlSexes_dgAbonnes";
+            this.ddlSexes_dgAbonnes.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ddlSexes_dgAbonnes.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.ddlSexes_dgAbonnes.ValueMember = "Id";
+            // 
+            // sexeBindingSource
+            // 
+            this.sexeBindingSource.DataSource = typeof(Projet2BD.Sexe);
+            // 
+            // tbDateNaissance_dgAbonnes
+            // 
+            this.tbDateNaissance_dgAbonnes.DataPropertyName = "DateNaissance";
+            dataGridViewCellStyle30.Format = "D";
+            dataGridViewCellStyle30.NullValue = null;
+            this.tbDateNaissance_dgAbonnes.DefaultCellStyle = dataGridViewCellStyle30;
+            this.tbDateNaissance_dgAbonnes.FillWeight = 125F;
+            this.tbDateNaissance_dgAbonnes.HeaderText = "Date de naissance";
+            this.tbDateNaissance_dgAbonnes.Name = "tbDateNaissance_dgAbonnes";
+            this.tbDateNaissance_dgAbonnes.ReadOnly = true;
+            this.tbDateNaissance_dgAbonnes.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // tbNoCivique_dgAbonnes
+            // 
+            this.tbNoCivique_dgAbonnes.DataPropertyName = "NoCivique";
+            dataGridViewCellStyle31.Format = "D";
+            dataGridViewCellStyle31.NullValue = null;
+            this.tbNoCivique_dgAbonnes.DefaultCellStyle = dataGridViewCellStyle31;
+            this.tbNoCivique_dgAbonnes.FillWeight = 50F;
+            this.tbNoCivique_dgAbonnes.HeaderText = "N° civique";
+            this.tbNoCivique_dgAbonnes.MaxInputLength = 4;
+            this.tbNoCivique_dgAbonnes.Name = "tbNoCivique_dgAbonnes";
+            // 
+            // tbRue_dgAbonnes
+            // 
+            this.tbRue_dgAbonnes.DataPropertyName = "Rue";
+            dataGridViewCellStyle32.Format = "D";
+            dataGridViewCellStyle32.NullValue = null;
+            this.tbRue_dgAbonnes.DefaultCellStyle = dataGridViewCellStyle32;
+            this.tbRue_dgAbonnes.HeaderText = "Rue";
+            this.tbRue_dgAbonnes.MaxInputLength = 50;
+            this.tbRue_dgAbonnes.Name = "tbRue_dgAbonnes";
+            // 
+            // tbVille_dgAbonnes
+            // 
+            this.tbVille_dgAbonnes.DataPropertyName = "Ville";
+            dataGridViewCellStyle33.Format = "D";
+            dataGridViewCellStyle33.NullValue = null;
+            this.tbVille_dgAbonnes.DefaultCellStyle = dataGridViewCellStyle33;
+            this.tbVille_dgAbonnes.FillWeight = 150F;
+            this.tbVille_dgAbonnes.HeaderText = "Ville";
+            this.tbVille_dgAbonnes.MaxInputLength = 50;
+            this.tbVille_dgAbonnes.Name = "tbVille_dgAbonnes";
+            // 
+            // ddlProvinces_dgAbonnes
+            // 
+            this.ddlProvinces_dgAbonnes.DataPropertyName = "IdProvince";
+            this.ddlProvinces_dgAbonnes.DataSource = this.provincesBindingSource;
+            this.ddlProvinces_dgAbonnes.DisplayMember = "Nom";
+            this.ddlProvinces_dgAbonnes.FillWeight = 150F;
+            this.ddlProvinces_dgAbonnes.HeaderText = "Province";
+            this.ddlProvinces_dgAbonnes.Name = "ddlProvinces_dgAbonnes";
+            this.ddlProvinces_dgAbonnes.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ddlProvinces_dgAbonnes.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.ddlProvinces_dgAbonnes.ValueMember = "Id";
+            // 
             // provincesBindingSource
             // 
             this.provincesBindingSource.DataSource = typeof(Projet2BD.Provinces);
             // 
+            // tbCodePostal_dgAbonnes
+            // 
+            this.tbCodePostal_dgAbonnes.DataPropertyName = "CodePostal";
+            this.tbCodePostal_dgAbonnes.FillWeight = 50F;
+            this.tbCodePostal_dgAbonnes.HeaderText = "Code postal";
+            this.tbCodePostal_dgAbonnes.MaxInputLength = 7;
+            this.tbCodePostal_dgAbonnes.Name = "tbCodePostal_dgAbonnes";
+            // 
+            // tbTelephone_dgAbonnes
+            // 
+            this.tbTelephone_dgAbonnes.DataPropertyName = "Telephone";
+            dataGridViewCellStyle34.Format = "\"(###) ###-####\"";
+            this.tbTelephone_dgAbonnes.DefaultCellStyle = dataGridViewCellStyle34;
+            this.tbTelephone_dgAbonnes.HeaderText = "Téléphone";
+            this.tbTelephone_dgAbonnes.MaxInputLength = 14;
+            this.tbTelephone_dgAbonnes.Name = "tbTelephone_dgAbonnes";
+            this.tbTelephone_dgAbonnes.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // tbCellulaire_dgAbonnes
+            // 
+            this.tbCellulaire_dgAbonnes.DataPropertyName = "Cellulaire";
+            dataGridViewCellStyle35.Format = "\"(###) ###-####\"";
+            this.tbCellulaire_dgAbonnes.DefaultCellStyle = dataGridViewCellStyle35;
+            this.tbCellulaire_dgAbonnes.HeaderText = "Cellulaire";
+            this.tbCellulaire_dgAbonnes.MaxInputLength = 14;
+            this.tbCellulaire_dgAbonnes.Name = "tbCellulaire_dgAbonnes";
+            this.tbCellulaire_dgAbonnes.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // tbCourriel_dgAbonnes
+            // 
+            this.tbCourriel_dgAbonnes.DataPropertyName = "Courriel";
+            dataGridViewCellStyle36.Format = "\"(###) ###-####\"";
+            this.tbCourriel_dgAbonnes.DefaultCellStyle = dataGridViewCellStyle36;
+            this.tbCourriel_dgAbonnes.FillWeight = 150F;
+            this.tbCourriel_dgAbonnes.HeaderText = "Courriel";
+            this.tbCourriel_dgAbonnes.MaxInputLength = 100;
+            this.tbCourriel_dgAbonnes.Name = "tbCourriel_dgAbonnes";
+            this.tbCourriel_dgAbonnes.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // ddlTypesAbonnement_dgAbonnes
+            // 
+            this.ddlTypesAbonnement_dgAbonnes.DataPropertyName = "NoTypeAbonnement";
+            this.ddlTypesAbonnement_dgAbonnes.DataSource = this.typesAbonnementBindingSource;
+            this.ddlTypesAbonnement_dgAbonnes.DisplayMember = "Description";
+            this.ddlTypesAbonnement_dgAbonnes.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.ddlTypesAbonnement_dgAbonnes.FillWeight = 150F;
+            this.ddlTypesAbonnement_dgAbonnes.HeaderText = "Type d\'abonnement";
+            this.ddlTypesAbonnement_dgAbonnes.Name = "ddlTypesAbonnement_dgAbonnes";
+            this.ddlTypesAbonnement_dgAbonnes.ReadOnly = true;
+            this.ddlTypesAbonnement_dgAbonnes.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ddlTypesAbonnement_dgAbonnes.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.ddlTypesAbonnement_dgAbonnes.ValueMember = "No";
+            // 
             // typesAbonnementBindingSource
             // 
             this.typesAbonnementBindingSource.DataSource = typeof(Projet2BD.TypesAbonnement);
+            // 
+            // tbRemarque_dgAbonnes
+            // 
+            this.tbRemarque_dgAbonnes.DataPropertyName = "Remarque";
+            this.tbRemarque_dgAbonnes.FillWeight = 200F;
+            this.tbRemarque_dgAbonnes.HeaderText = "Remarque";
+            this.tbRemarque_dgAbonnes.MaxInputLength = 500;
+            this.tbRemarque_dgAbonnes.Name = "tbRemarque_dgAbonnes";
             // 
             // lblAbonnes
             // 
@@ -149,8 +323,8 @@
             // dataGridViewTextBoxColumn11
             // 
             this.dataGridViewTextBoxColumn11.DataPropertyName = "Telephone";
-            dataGridViewCellStyle27.Format = "\"(###) ###-####\"";
-            this.dataGridViewTextBoxColumn11.DefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle37.Format = "\"(###) ###-####\"";
+            this.dataGridViewTextBoxColumn11.DefaultCellStyle = dataGridViewCellStyle37;
             this.dataGridViewTextBoxColumn11.HeaderText = "Telephone";
             this.dataGridViewTextBoxColumn11.MaxInputLength = 10;
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
@@ -159,8 +333,8 @@
             // dataGridViewTextBoxColumn12
             // 
             this.dataGridViewTextBoxColumn12.DataPropertyName = "Cellulaire";
-            dataGridViewCellStyle28.Format = "\"(###) ###-####\"";
-            this.dataGridViewTextBoxColumn12.DefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle38.Format = "\"(###) ###-####\"";
+            this.dataGridViewTextBoxColumn12.DefaultCellStyle = dataGridViewCellStyle38;
             this.dataGridViewTextBoxColumn12.HeaderText = "Cellulaire";
             this.dataGridViewTextBoxColumn12.MaxInputLength = 10;
             this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
@@ -206,186 +380,6 @@
             this.dgDependants.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgDependants_CellEndEdit);
             this.dgDependants.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.dgDependants_CellValidating);
             // 
-            // btnMettreAJourAbonnes
-            // 
-            this.btnMettreAJourAbonnes.Location = new System.Drawing.Point(839, 729);
-            this.btnMettreAJourAbonnes.Name = "btnMettreAJourAbonnes";
-            this.btnMettreAJourAbonnes.Size = new System.Drawing.Size(162, 34);
-            this.btnMettreAJourAbonnes.TabIndex = 24;
-            this.btnMettreAJourAbonnes.Text = "Mettre à jour les abonnés";
-            this.btnMettreAJourAbonnes.UseVisualStyleBackColor = true;
-            this.btnMettreAJourAbonnes.Click += new System.EventHandler(this.btnMettreAJourAbonnes_Click);
-            // 
-            // tbId_dgAbonnes
-            // 
-            this.tbId_dgAbonnes.DataPropertyName = "Id";
-            this.tbId_dgAbonnes.FillWeight = 75F;
-            this.tbId_dgAbonnes.HeaderText = "Id";
-            this.tbId_dgAbonnes.Name = "tbId_dgAbonnes";
-            this.tbId_dgAbonnes.ReadOnly = true;
-            // 
-            // tbDateAbonnement_dgAbonnes
-            // 
-            this.tbDateAbonnement_dgAbonnes.DataPropertyName = "DateAbonnement";
-            dataGridViewCellStyle30.Format = "D";
-            dataGridViewCellStyle30.NullValue = null;
-            this.tbDateAbonnement_dgAbonnes.DefaultCellStyle = dataGridViewCellStyle30;
-            this.tbDateAbonnement_dgAbonnes.FillWeight = 125F;
-            this.tbDateAbonnement_dgAbonnes.HeaderText = "Date d\'abonnement";
-            this.tbDateAbonnement_dgAbonnes.Name = "tbDateAbonnement_dgAbonnes";
-            this.tbDateAbonnement_dgAbonnes.ReadOnly = true;
-            // 
-            // tbNom_dgAbonnes
-            // 
-            this.tbNom_dgAbonnes.DataPropertyName = "Nom";
-            dataGridViewCellStyle31.Format = "D";
-            dataGridViewCellStyle31.NullValue = null;
-            this.tbNom_dgAbonnes.DefaultCellStyle = dataGridViewCellStyle31;
-            this.tbNom_dgAbonnes.FillWeight = 75F;
-            this.tbNom_dgAbonnes.HeaderText = "Nom";
-            this.tbNom_dgAbonnes.Name = "tbNom_dgAbonnes";
-            this.tbNom_dgAbonnes.ReadOnly = true;
-            // 
-            // tbPrenom_dgAbonnes
-            // 
-            this.tbPrenom_dgAbonnes.DataPropertyName = "Prenom";
-            dataGridViewCellStyle32.Format = "D";
-            dataGridViewCellStyle32.NullValue = null;
-            this.tbPrenom_dgAbonnes.DefaultCellStyle = dataGridViewCellStyle32;
-            this.tbPrenom_dgAbonnes.FillWeight = 75F;
-            this.tbPrenom_dgAbonnes.HeaderText = "Prénom";
-            this.tbPrenom_dgAbonnes.MaxInputLength = 50;
-            this.tbPrenom_dgAbonnes.Name = "tbPrenom_dgAbonnes";
-            // 
-            // ddlSexes_dgAbonnes
-            // 
-            this.ddlSexes_dgAbonnes.DataPropertyName = "Sexe";
-            this.ddlSexes_dgAbonnes.DataSource = this.sexeBindingSource;
-            this.ddlSexes_dgAbonnes.DisplayMember = "Nom";
-            this.ddlSexes_dgAbonnes.FillWeight = 75F;
-            this.ddlSexes_dgAbonnes.HeaderText = "Sexe";
-            this.ddlSexes_dgAbonnes.Name = "ddlSexes_dgAbonnes";
-            this.ddlSexes_dgAbonnes.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ddlSexes_dgAbonnes.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.ddlSexes_dgAbonnes.ValueMember = "Id";
-            // 
-            // tbDateNaissance_dgAbonnes
-            // 
-            this.tbDateNaissance_dgAbonnes.DataPropertyName = "DateNaissance";
-            dataGridViewCellStyle33.Format = "D";
-            dataGridViewCellStyle33.NullValue = null;
-            this.tbDateNaissance_dgAbonnes.DefaultCellStyle = dataGridViewCellStyle33;
-            this.tbDateNaissance_dgAbonnes.FillWeight = 125F;
-            this.tbDateNaissance_dgAbonnes.HeaderText = "Date de naissance";
-            this.tbDateNaissance_dgAbonnes.Name = "tbDateNaissance_dgAbonnes";
-            this.tbDateNaissance_dgAbonnes.ReadOnly = true;
-            this.tbDateNaissance_dgAbonnes.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // tbNoCivique_dgAbonnes
-            // 
-            this.tbNoCivique_dgAbonnes.DataPropertyName = "NoCivique";
-            dataGridViewCellStyle34.Format = "D";
-            dataGridViewCellStyle34.NullValue = null;
-            this.tbNoCivique_dgAbonnes.DefaultCellStyle = dataGridViewCellStyle34;
-            this.tbNoCivique_dgAbonnes.FillWeight = 50F;
-            this.tbNoCivique_dgAbonnes.HeaderText = "N° civique";
-            this.tbNoCivique_dgAbonnes.MaxInputLength = 4;
-            this.tbNoCivique_dgAbonnes.Name = "tbNoCivique_dgAbonnes";
-            // 
-            // tbRue_dgAbonnes
-            // 
-            this.tbRue_dgAbonnes.DataPropertyName = "Rue";
-            dataGridViewCellStyle35.Format = "D";
-            dataGridViewCellStyle35.NullValue = null;
-            this.tbRue_dgAbonnes.DefaultCellStyle = dataGridViewCellStyle35;
-            this.tbRue_dgAbonnes.HeaderText = "Rue";
-            this.tbRue_dgAbonnes.MaxInputLength = 50;
-            this.tbRue_dgAbonnes.Name = "tbRue_dgAbonnes";
-            // 
-            // tbVille_dgAbonnes
-            // 
-            this.tbVille_dgAbonnes.DataPropertyName = "Ville";
-            dataGridViewCellStyle36.Format = "D";
-            dataGridViewCellStyle36.NullValue = null;
-            this.tbVille_dgAbonnes.DefaultCellStyle = dataGridViewCellStyle36;
-            this.tbVille_dgAbonnes.FillWeight = 150F;
-            this.tbVille_dgAbonnes.HeaderText = "Ville";
-            this.tbVille_dgAbonnes.MaxInputLength = 50;
-            this.tbVille_dgAbonnes.Name = "tbVille_dgAbonnes";
-            // 
-            // ddlProvinces_dgAbonnes
-            // 
-            this.ddlProvinces_dgAbonnes.DataPropertyName = "IdProvince";
-            this.ddlProvinces_dgAbonnes.DataSource = this.provincesBindingSource;
-            this.ddlProvinces_dgAbonnes.DisplayMember = "Nom";
-            this.ddlProvinces_dgAbonnes.FillWeight = 150F;
-            this.ddlProvinces_dgAbonnes.HeaderText = "Province";
-            this.ddlProvinces_dgAbonnes.Name = "ddlProvinces_dgAbonnes";
-            this.ddlProvinces_dgAbonnes.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ddlProvinces_dgAbonnes.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.ddlProvinces_dgAbonnes.ValueMember = "Id";
-            // 
-            // tbCodePostal_dgAbonnes
-            // 
-            this.tbCodePostal_dgAbonnes.DataPropertyName = "CodePostal";
-            this.tbCodePostal_dgAbonnes.FillWeight = 50F;
-            this.tbCodePostal_dgAbonnes.HeaderText = "Code postal";
-            this.tbCodePostal_dgAbonnes.MaxInputLength = 7;
-            this.tbCodePostal_dgAbonnes.Name = "tbCodePostal_dgAbonnes";
-            // 
-            // tbTelephone_dgAbonnes
-            // 
-            this.tbTelephone_dgAbonnes.DataPropertyName = "Telephone";
-            dataGridViewCellStyle37.Format = "\"(###) ###-####\"";
-            this.tbTelephone_dgAbonnes.DefaultCellStyle = dataGridViewCellStyle37;
-            this.tbTelephone_dgAbonnes.HeaderText = "Téléphone";
-            this.tbTelephone_dgAbonnes.MaxInputLength = 14;
-            this.tbTelephone_dgAbonnes.Name = "tbTelephone_dgAbonnes";
-            this.tbTelephone_dgAbonnes.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // tbCellulaire_dgAbonnes
-            // 
-            this.tbCellulaire_dgAbonnes.DataPropertyName = "Cellulaire";
-            dataGridViewCellStyle38.Format = "\"(###) ###-####\"";
-            this.tbCellulaire_dgAbonnes.DefaultCellStyle = dataGridViewCellStyle38;
-            this.tbCellulaire_dgAbonnes.HeaderText = "Cellulaire";
-            this.tbCellulaire_dgAbonnes.MaxInputLength = 14;
-            this.tbCellulaire_dgAbonnes.Name = "tbCellulaire_dgAbonnes";
-            this.tbCellulaire_dgAbonnes.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // tbCourriel_dgAbonnes
-            // 
-            this.tbCourriel_dgAbonnes.DataPropertyName = "Courriel";
-            dataGridViewCellStyle39.Format = "\"(###) ###-####\"";
-            this.tbCourriel_dgAbonnes.DefaultCellStyle = dataGridViewCellStyle39;
-            this.tbCourriel_dgAbonnes.FillWeight = 150F;
-            this.tbCourriel_dgAbonnes.HeaderText = "Courriel";
-            this.tbCourriel_dgAbonnes.MaxInputLength = 100;
-            this.tbCourriel_dgAbonnes.Name = "tbCourriel_dgAbonnes";
-            this.tbCourriel_dgAbonnes.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // ddlTypesAbonnement_dgAbonnes
-            // 
-            this.ddlTypesAbonnement_dgAbonnes.DataPropertyName = "NoTypeAbonnement";
-            this.ddlTypesAbonnement_dgAbonnes.DataSource = this.typesAbonnementBindingSource;
-            this.ddlTypesAbonnement_dgAbonnes.DisplayMember = "Description";
-            this.ddlTypesAbonnement_dgAbonnes.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.ddlTypesAbonnement_dgAbonnes.FillWeight = 150F;
-            this.ddlTypesAbonnement_dgAbonnes.HeaderText = "Type d\'abonnement";
-            this.ddlTypesAbonnement_dgAbonnes.Name = "ddlTypesAbonnement_dgAbonnes";
-            this.ddlTypesAbonnement_dgAbonnes.ReadOnly = true;
-            this.ddlTypesAbonnement_dgAbonnes.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ddlTypesAbonnement_dgAbonnes.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.ddlTypesAbonnement_dgAbonnes.ValueMember = "No";
-            // 
-            // tbRemarque_dgAbonnes
-            // 
-            this.tbRemarque_dgAbonnes.DataPropertyName = "Remarque";
-            this.tbRemarque_dgAbonnes.FillWeight = 200F;
-            this.tbRemarque_dgAbonnes.HeaderText = "Remarque";
-            this.tbRemarque_dgAbonnes.MaxInputLength = 500;
-            this.tbRemarque_dgAbonnes.Name = "tbRemarque_dgAbonnes";
-            // 
             // tbId_dgDependants
             // 
             this.tbId_dgDependants.DataPropertyName = "Id";
@@ -425,9 +419,9 @@
             // tbDateNaissance_dgDependants
             // 
             this.tbDateNaissance_dgDependants.DataPropertyName = "DateNaissance";
-            dataGridViewCellStyle29.Format = "D";
-            dataGridViewCellStyle29.NullValue = null;
-            this.tbDateNaissance_dgDependants.DefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle39.Format = "D";
+            dataGridViewCellStyle39.NullValue = null;
+            this.tbDateNaissance_dgDependants.DefaultCellStyle = dataGridViewCellStyle39;
             this.tbDateNaissance_dgDependants.FillWeight = 125F;
             this.tbDateNaissance_dgDependants.HeaderText = "Date de naissance";
             this.tbDateNaissance_dgDependants.Name = "tbDateNaissance_dgDependants";
@@ -449,9 +443,15 @@
             this.tbRemarque_dgDependants.MaxInputLength = 500;
             this.tbRemarque_dgDependants.Name = "tbRemarque_dgDependants";
             // 
-            // sexeBindingSource
+            // btnMettreAJourAbonnes
             // 
-            this.sexeBindingSource.DataSource = typeof(Projet2BD.Sexe);
+            this.btnMettreAJourAbonnes.Location = new System.Drawing.Point(834, 729);
+            this.btnMettreAJourAbonnes.Name = "btnMettreAJourAbonnes";
+            this.btnMettreAJourAbonnes.Size = new System.Drawing.Size(172, 34);
+            this.btnMettreAJourAbonnes.TabIndex = 24;
+            this.btnMettreAJourAbonnes.Text = "Enregistrer les modifications";
+            this.btnMettreAJourAbonnes.UseVisualStyleBackColor = true;
+            this.btnMettreAJourAbonnes.Click += new System.EventHandler(this.btnMettreAJourAbonnes_Click);
             // 
             // MettreAJourAbonnes
             // 
@@ -468,11 +468,11 @@
             this.Load += new System.EventHandler(this.MettreAJourAbonnes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.abonnementsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgAbonnes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sexeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.provincesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.typesAbonnementBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dependantsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgDependants)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sexeBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

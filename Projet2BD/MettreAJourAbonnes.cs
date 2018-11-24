@@ -247,6 +247,16 @@ namespace Projet2BD
                 catch (ChangeConflictException)
                 {
                     dataContext.ChangeConflicts.ResolveAll(RefreshMode.KeepChanges);
+                    try
+                    {
+                        dataContext.SubmitChanges();
+                        transaction.Complete();
+                        MessageBox.Show("Les modifications ont été enregistrés dans la base de données.", "Enregistrement des données");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Erreur lors de l'enregistrement des données");
+                    }
                 }
                 catch (Exception ex)
                 {
