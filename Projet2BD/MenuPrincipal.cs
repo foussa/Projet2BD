@@ -118,12 +118,12 @@ namespace Projet2BD
 
         private void btnVisualiserRapports_Click(object sender, EventArgs e)
         {
-
+            new VisualiserRapports().ShowDialog();
         }
 
         private void btnVisualiserStatistiques_Click(object sender, EventArgs e)
         {
-
+            new VisualiserStatistiques().ShowDialog();
         }
 
         private void btnDeconnecter_Click(object sender, EventArgs e)

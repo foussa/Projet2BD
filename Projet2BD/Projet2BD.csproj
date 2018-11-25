@@ -54,6 +54,12 @@
     <Compile Include="MettreAJourAbonnes.Designer.cs">
       <DependentUpon>MettreAJourAbonnes.cs</DependentUpon>
     </Compile>
+    <Compile Include="VisualiserRapports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VisualiserRapports.Designer.cs">
+      <DependentUpon>VisualiserRapports.cs</DependentUpon>
+    </Compile>
     <Compile Include="RenouvellerAbonnement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,12 @@
       <DependentUpon>SaisieDependant.cs</DependentUpon>
     </Compile>
     <Compile Include="Sexe.cs" />
+    <Compile Include="VisualiserStatistiques.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VisualiserStatistiques.Designer.cs">
+      <DependentUpon>VisualiserStatistiques.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AjouterAbonnement.resx">
       <DependentUpon>AjouterAbonnement.cs</DependentUpon>
     </EmbeddedResource>
@@ -139,6 +151,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SaisieDependant.resx">
       <DependentUpon>SaisieDependant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualiserRapports.resx">
+      <DependentUpon>VisualiserRapports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualiserStatistiques.resx">
+      <DependentUpon>VisualiserStatistiques.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="DataClasses1.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
