@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -40,6 +41,13 @@ namespace Projet2BD
             {
                 dataContext.SubmitChanges();
                 MessageBox.Show("Le réabonnement a été enregistré dans la base de données.", "Enregistrement des données");
+            }
+            catch (SqlException ex)
+            {
+                if (ex.Number == 2627)
+                    MessageBox.Show("Le réabonnement existe déjà dans la base de données.", "Erreur lors de l'enregistrement des données");
+                else
+                    MessageBox.Show(ex.Message, "Erreur lors de l'enregistrement des données");
             }
             catch (Exception ex)
             {

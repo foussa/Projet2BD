@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Data.Linq;
 using System.Linq;
+using System.Net.Mail;
 using System.Text.RegularExpressions;
 using System.Transactions;
 using System.Windows.Forms;
@@ -49,9 +49,9 @@ namespace Projet2BD
                 else if (dgAbonnes.Columns[e.ColumnIndex].Name == "tbTelephone_dgAbonnes")
                 {
                     e.Value = string.Format("({0}) {1}-{2}",
-                                                e.Value.ToString().Substring(0, 3),
-                                                e.Value.ToString().Substring(3, 3),
-                                                e.Value.ToString().Substring(6, 4));
+                                            e.Value.ToString().Substring(0, 3),
+                                            e.Value.ToString().Substring(3, 3),
+                                            e.Value.ToString().Substring(6, 4));
                     e.FormattingApplied = true;
                 }
             }
@@ -66,6 +66,11 @@ namespace Projet2BD
                 if (string.IsNullOrEmpty(e.FormattedValue.ToString().Trim()))
                 {
                     dgAbonnes.Rows[e.RowIndex].ErrorText = "Le prénom ne peut pas être vide";
+                    e.Cancel = true;
+                }
+                else if (!Regex.IsMatch(e.FormattedValue.ToString().Trim(), "^\\p{L}+(([-' ]\\p{L})|\\p{L})*$"))
+                {
+                    dgAbonnes.Rows[e.RowIndex].ErrorText = "Le prénom doit débuter par une lettre suivi d'un tiret, apostrophe, espace ou lettre et se terminer par une lettre";
                     e.Cancel = true;
                 }
             }
@@ -96,12 +101,22 @@ namespace Projet2BD
                     dgAbonnes.Rows[e.RowIndex].ErrorText = "La rue ne peut pas être vide";
                     e.Cancel = true;
                 }
+                else if (!Regex.IsMatch(e.FormattedValue.ToString().Trim(), "^(\\d{1,3}(e|th) )?\\p{L}+(([-' ]\\p{L})|\\p{L})*$"))
+                {
+                    dgAbonnes.Rows[e.RowIndex].ErrorText = "La rue doit débuter par une lettre suivi d'un tiret, apostrophe, espace ou lettre et se terminer par une lettre";
+                    e.Cancel = true;
+                }
             }
             else if (dgAbonnes.Columns[e.ColumnIndex].Name == "tbVille_dgAbonnes")
             {
                 if (string.IsNullOrEmpty(e.FormattedValue.ToString().Trim()))
                 {
                     dgAbonnes.Rows[e.RowIndex].ErrorText = "La ville ne peut pas être vide";
+                    e.Cancel = true;
+                }
+                else if (!Regex.IsMatch(e.FormattedValue.ToString().Trim(), "^\\p{L}+(([-' ]\\p{L})|\\p{L})*$"))
+                {
+                    dgAbonnes.Rows[e.RowIndex].ErrorText = "La ville doit débuter par une lettre suivi d'un tiret, apostrophe, espace ou lettre et se terminer par une lettre";
                     e.Cancel = true;
                 }
             }
@@ -112,14 +127,10 @@ namespace Projet2BD
                     dgAbonnes.Rows[e.RowIndex].ErrorText = "Le code postal ne peut pas être vide";
                     e.Cancel = true;
                 }
-                else
+                else if (!Regex.IsMatch(e.FormattedValue.ToString().Trim(), "^[a-zA-Z]\\d[a-zA-Z] ?\\d[a-zA-Z]\\d$"))
                 {
-                    Regex exprCodePostal = new Regex("^[a-zA-Z]\\d[a-zA-Z] ?\\d[a-zA-Z]\\d$");
-                    if (!exprCodePostal.IsMatch(e.FormattedValue.ToString()))
-                    {
-                        dgAbonnes.Rows[e.RowIndex].ErrorText = "Le code postal doit respecter le format @#@ #@# ou @#@#@#";
-                        e.Cancel = true;
-                    }
+                    dgAbonnes.Rows[e.RowIndex].ErrorText = "Le code postal doit respecter le format @#@ #@# ou @#@#@#";
+                    e.Cancel = true;
                 }
             }
             else if (dgAbonnes.Columns[e.ColumnIndex].Name == "tbTelephone_dgAbonnes")
@@ -129,22 +140,17 @@ namespace Projet2BD
                     dgAbonnes.Rows[e.RowIndex].ErrorText = "Le téléphone ne peut pas être vide";
                     e.Cancel = true;
                 }
-                else
+                else if (!Regex.IsMatch(e.FormattedValue.ToString().Trim(), "^(\\(\\d{3}\\) ?\\d{3}-\\d{4}|\\d{3}-\\d{3}-\\d{4}|\\d{10})$"))
                 {
-                    Regex exprTelephone = new Regex("^(\\(\\d{3}\\) ?\\d{3}-\\d{4}|\\d{3}-\\d{3}-\\d{4}|\\d{10})$");
-                    if (!exprTelephone.IsMatch(e.FormattedValue.ToString()))
-                    {
-                        dgAbonnes.Rows[e.RowIndex].ErrorText = "Le téléphone doit respecter le format (###) ###-### ou (###)###-### ou ###-###-#### ou ##########";
-                        e.Cancel = true;
-                    }
+                    dgAbonnes.Rows[e.RowIndex].ErrorText = "Le téléphone doit respecter le format (###) ###-### ou (###)###-### ou ###-###-#### ou ##########";
+                    e.Cancel = true;
                 }
             }
             else if (dgAbonnes.Columns[e.ColumnIndex].Name == "tbCellulaire_dgAbonnes")
             {
                 if (!string.IsNullOrEmpty(e.FormattedValue.ToString().Trim()))
                 {
-                    Regex exprTelephone = new Regex("^(\\(\\d{3}\\) \\d{3}-\\d{4}|\\d{3}-\\d{3}-\\d{4}|\\d{10})$");
-                    if (!exprTelephone.IsMatch(e.FormattedValue.ToString()))
+                    if (!Regex.IsMatch(e.FormattedValue.ToString().Trim(), "^(\\(\\d{3}\\) ?\\d{3}-\\d{4}|\\d{3}-\\d{3}-\\d{4}|\\d{10})$"))
                     {
                         dgAbonnes.Rows[e.RowIndex].ErrorText = "Le cellulaire doit respecter le format (###) ###-### ou (###)###-### ou ###-###-#### ou ##########";
                         e.Cancel = true;
@@ -153,9 +159,18 @@ namespace Projet2BD
             }
             else if (dgAbonnes.Columns[e.ColumnIndex].Name == "tbCourriel_dgAbonnes")
             {
-                if (string.IsNullOrEmpty(e.FormattedValue.ToString().Trim()))
+                try
+                {
+                    new MailAddress(e.FormattedValue.ToString().Trim());
+                }
+                catch (ArgumentException)
                 {
                     dgAbonnes.Rows[e.RowIndex].ErrorText = "Le courriel ne peut pas être vide";
+                    e.Cancel = true;
+                }
+                catch (FormatException)
+                {
+                    dgAbonnes.Rows[e.RowIndex].ErrorText = "Le courriel n'est pas dans un format valide";
                     e.Cancel = true;
                 }
             }
@@ -218,12 +233,22 @@ namespace Projet2BD
                     dgAbonnes.Rows[e.RowIndex].ErrorText = "Le prénom ne peut pas être vide";
                     e.Cancel = true;
                 }
+                else if (!Regex.IsMatch(e.FormattedValue.ToString().Trim(), "^\\p{L}+(([-' ]\\p{L})|\\p{L})*$"))
+                {
+                    dgAbonnes.Rows[e.RowIndex].ErrorText = "Le prénom doit débuter par une lettre suivi d'un tiret, apostrophe, espace ou lettre et se terminer par une lettre";
+                    e.Cancel = true;
+                }
             }
             else if (dgAbonnes.Columns[e.ColumnIndex].Name == "tbNom_dgDependants")
             {
                 if (string.IsNullOrEmpty(e.FormattedValue.ToString().Trim()))
                 {
                     dgAbonnes.Rows[e.RowIndex].ErrorText = "Le nom ne peut pas être vide";
+                    e.Cancel = true;
+                }
+                else if (!Regex.IsMatch(e.FormattedValue.ToString().Trim(), "^\\p{L}+(([-' ]\\p{L})|\\p{L})*$"))
+                {
+                    dgAbonnes.Rows[e.RowIndex].ErrorText = "Le nom doit débuter par une lettre suivi d'un tiret, apostrophe, espace ou lettre et se terminer par une lettre";
                     e.Cancel = true;
                 }
             }

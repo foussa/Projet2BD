@@ -1,3 +1,8 @@
+using System;
+using System.Data.Linq;
+using System.Linq;
+using System.Text.RegularExpressions;
+
 namespace Projet2BD
 {
     public partial class Abonnements

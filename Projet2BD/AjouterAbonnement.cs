@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.Linq;
 using System.Drawing;
 using System.Linq;
 using System.Net.Mail;
+using System.Text.RegularExpressions;
 using System.Transactions;
 using System.Windows.Forms;
 
@@ -194,6 +194,11 @@ namespace Projet2BD
                 errMessage.SetError(tbPrenom, "Le prénom ne peut pas être vide");
                 e.Cancel = true;
             }
+            else if (!Regex.IsMatch(tbPrenom.Text.Trim(), "^\\p{L}+(([-' ]\\p{L})|\\p{L})*$"))
+            {
+                errMessage.SetError(tbPrenom, "Le prénom doit débuter par une lettre suivi d'un tiret, apostrophe, espace ou lettre et se terminer par une lettre");
+                e.Cancel = true;
+            }
         }
 
         private void tbPrenom_Validated(object sender, EventArgs e)
@@ -206,6 +211,11 @@ namespace Projet2BD
             if (string.IsNullOrEmpty(tbNom.Text.Trim()))
             {
                 errMessage.SetError(tbNom, "Le nom ne peut pas être vide");
+                e.Cancel = true;
+            }
+            else if (!Regex.IsMatch(tbNom.Text.Trim(), "^\\p{L}+(([-' ]\\p{L})|\\p{L})*$"))
+            {
+                errMessage.SetError(tbNom, "Le nom doit débuter par une lettre suivi d'un tiret, apostrophe, espace ou lettre et se terminer par une lettre");
                 e.Cancel = true;
             }
         }
@@ -252,6 +262,11 @@ namespace Projet2BD
                 errMessage.SetError(tbRue, "La rue ne peut pas être vide");
                 e.Cancel = true;
             }
+            else if (!Regex.IsMatch(tbRue.Text.Trim(), "^(\\d{1,3}(e|th) )?\\p{L}+(([-' ]\\p{L})|\\p{L})*$"))
+            {
+                errMessage.SetError(tbNom, "La rue doit débuter par une lettre suivi d'un tiret, apostrophe, espace ou lettre et se terminer par une lettre");
+                e.Cancel = true;
+            }
         }
 
         private void tbRue_Validated(object sender, EventArgs e)
@@ -264,6 +279,11 @@ namespace Projet2BD
             if (string.IsNullOrEmpty(tbVille.Text.Trim()))
             {
                 errMessage.SetError(tbVille, "La ville ne peut pas être vide");
+                e.Cancel = true;
+            }
+            else if (!Regex.IsMatch(tbVille.Text.Trim(), "^\\p{L}+(([-' ]\\p{L})|\\p{L})*$"))
+            {
+                errMessage.SetError(tbNom, "La ville doit débuter par une lettre suivi d'un tiret, apostrophe, espace ou lettre et se terminer par une lettre");
                 e.Cancel = true;
             }
         }
@@ -282,7 +302,7 @@ namespace Projet2BD
             }
             else if (!mtbCodePostal.MaskCompleted)
             {
-                errMessage.SetError(mtbCodePostal, "Le code postal doit respecter le format");
+                errMessage.SetError(mtbCodePostal, "Le code postal doit respecter le masque de saisie");
                 e.Cancel = true;
             }
         }
@@ -301,7 +321,7 @@ namespace Projet2BD
             }
             else if (!mtbTelephone.MaskCompleted)
             {
-                errMessage.SetError(mtbTelephone, "Le téléphone doit respecter le format");
+                errMessage.SetError(mtbTelephone, "Le téléphone doit respecter le masque de saisie");
                 e.Cancel = true;
             }
         }
@@ -315,7 +335,7 @@ namespace Projet2BD
         {
             if (!string.IsNullOrEmpty(mtbCellulaire.Text.Trim('(', ')', '-', ' ')) && !mtbCellulaire.MaskCompleted)
             {
-                errMessage.SetError(mtbCellulaire, "Le cellulaire doit respecter le format");
+                errMessage.SetError(mtbCellulaire, "Le cellulaire doit respecter le masque de saisie");
                 e.Cancel = true;
             }
         }
@@ -338,7 +358,7 @@ namespace Projet2BD
             }
             catch (FormatException)
             {
-                errMessage.SetError(tbCourriel, "Le courriel doit respecter le format");
+                errMessage.SetError(tbCourriel, "Le courriel n'est pas dans un format valide");
                 e.Cancel = true;
             }
         }
@@ -364,9 +384,9 @@ namespace Projet2BD
                 abonnement.Ville = tbVille.Text.Trim();
                 abonnement.IdProvince = ddlProvinces.SelectedValue.ToString();
                 abonnement.CodePostal = mtbCodePostal.Text.Remove(3, 1);
-                abonnement.Telephone = new string(mtbTelephone.Text.Where(c => c != '(' && c != ')' && c != ' ' && c != '-').ToArray());
+                abonnement.Telephone = new string(mtbTelephone.Text.Where(c => char.IsDigit(c)).ToArray());
                 if (mtbCellulaire.MaskCompleted)
-                    abonnement.Cellulaire = new string(mtbCellulaire.Text.Where(c => c != '(' && c != ')' && c != ' ' && c != '-').ToArray());
+                    abonnement.Cellulaire = new string(mtbCellulaire.Text.Where(c => char.IsDigit(c)).ToArray());
                 abonnement.Courriel = tbCourriel.Text.Trim();
                 abonnement.NoTypeAbonnement = (int)ddlTypesAbonnement.SelectedValue;
                 if (!string.IsNullOrEmpty(tbRemarque.Text.Trim())) abonnement.Remarque = tbRemarque.Text.Trim();
@@ -381,6 +401,15 @@ namespace Projet2BD
                 {
                     try
                     {
+                        while (abonnement.Id != $"{tbNom.Text.Trim()}{dataContext.Abonnements.Count() + 1}P")
+                        {
+                            abonnement.Id = $"{tbNom.Text.Trim()}{dataContext.Abonnements.Count() + 1}P";
+                            abonnement.Dependants.Clear();
+                            foreach (Control controle in lstControlesDynamiques)
+                                if (controle is SaisieDependant)
+                                    abonnement.Dependants.Add(((SaisieDependant)controle).creerDependant(abonnement.Id));
+                        }
+
                         dataContext.SubmitChanges();
                         transaction.Complete();
                         MessageBox.Show("L'abonnement a été enregistré dans la base de données.", "Enregistrement des données");
