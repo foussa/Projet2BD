@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             this.abonnementsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dgAbonnes = new System.Windows.Forms.DataGridView();
             this.tbId_dgAbonnes = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -138,9 +138,9 @@
             // tbDateAbonnement_dgAbonnes
             // 
             this.tbDateAbonnement_dgAbonnes.DataPropertyName = "DateAbonnement";
-            dataGridViewCellStyle27.Format = "D";
-            dataGridViewCellStyle27.NullValue = null;
-            this.tbDateAbonnement_dgAbonnes.DefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle1.Format = "D";
+            dataGridViewCellStyle1.NullValue = null;
+            this.tbDateAbonnement_dgAbonnes.DefaultCellStyle = dataGridViewCellStyle1;
             this.tbDateAbonnement_dgAbonnes.FillWeight = 125F;
             this.tbDateAbonnement_dgAbonnes.HeaderText = "Date d\'abonnement";
             this.tbDateAbonnement_dgAbonnes.Name = "tbDateAbonnement_dgAbonnes";
@@ -149,9 +149,9 @@
             // tbNom_dgAbonnes
             // 
             this.tbNom_dgAbonnes.DataPropertyName = "Nom";
-            dataGridViewCellStyle28.Format = "D";
-            dataGridViewCellStyle28.NullValue = null;
-            this.tbNom_dgAbonnes.DefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle2.Format = "D";
+            dataGridViewCellStyle2.NullValue = null;
+            this.tbNom_dgAbonnes.DefaultCellStyle = dataGridViewCellStyle2;
             this.tbNom_dgAbonnes.FillWeight = 75F;
             this.tbNom_dgAbonnes.HeaderText = "Nom";
             this.tbNom_dgAbonnes.Name = "tbNom_dgAbonnes";
@@ -160,9 +160,9 @@
             // tbPrenom_dgAbonnes
             // 
             this.tbPrenom_dgAbonnes.DataPropertyName = "Prenom";
-            dataGridViewCellStyle29.Format = "D";
-            dataGridViewCellStyle29.NullValue = null;
-            this.tbPrenom_dgAbonnes.DefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle3.Format = "D";
+            dataGridViewCellStyle3.NullValue = null;
+            this.tbPrenom_dgAbonnes.DefaultCellStyle = dataGridViewCellStyle3;
             this.tbPrenom_dgAbonnes.FillWeight = 75F;
             this.tbPrenom_dgAbonnes.HeaderText = "Prénom";
             this.tbPrenom_dgAbonnes.MaxInputLength = 50;
@@ -187,9 +187,9 @@
             // tbDateNaissance_dgAbonnes
             // 
             this.tbDateNaissance_dgAbonnes.DataPropertyName = "DateNaissance";
-            dataGridViewCellStyle30.Format = "D";
-            dataGridViewCellStyle30.NullValue = null;
-            this.tbDateNaissance_dgAbonnes.DefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle4.Format = "D";
+            dataGridViewCellStyle4.NullValue = null;
+            this.tbDateNaissance_dgAbonnes.DefaultCellStyle = dataGridViewCellStyle4;
             this.tbDateNaissance_dgAbonnes.FillWeight = 125F;
             this.tbDateNaissance_dgAbonnes.HeaderText = "Date de naissance";
             this.tbDateNaissance_dgAbonnes.Name = "tbDateNaissance_dgAbonnes";
@@ -199,9 +199,9 @@
             // tbNoCivique_dgAbonnes
             // 
             this.tbNoCivique_dgAbonnes.DataPropertyName = "NoCivique";
-            dataGridViewCellStyle31.Format = "D";
-            dataGridViewCellStyle31.NullValue = null;
-            this.tbNoCivique_dgAbonnes.DefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle5.Format = "D";
+            dataGridViewCellStyle5.NullValue = null;
+            this.tbNoCivique_dgAbonnes.DefaultCellStyle = dataGridViewCellStyle5;
             this.tbNoCivique_dgAbonnes.FillWeight = 50F;
             this.tbNoCivique_dgAbonnes.HeaderText = "N° civique";
             this.tbNoCivique_dgAbonnes.MaxInputLength = 4;
@@ -210,9 +210,9 @@
             // tbRue_dgAbonnes
             // 
             this.tbRue_dgAbonnes.DataPropertyName = "Rue";
-            dataGridViewCellStyle32.Format = "D";
-            dataGridViewCellStyle32.NullValue = null;
-            this.tbRue_dgAbonnes.DefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle6.Format = "D";
+            dataGridViewCellStyle6.NullValue = null;
+            this.tbRue_dgAbonnes.DefaultCellStyle = dataGridViewCellStyle6;
             this.tbRue_dgAbonnes.HeaderText = "Rue";
             this.tbRue_dgAbonnes.MaxInputLength = 50;
             this.tbRue_dgAbonnes.Name = "tbRue_dgAbonnes";
@@ -220,9 +220,9 @@
             // tbVille_dgAbonnes
             // 
             this.tbVille_dgAbonnes.DataPropertyName = "Ville";
-            dataGridViewCellStyle33.Format = "D";
-            dataGridViewCellStyle33.NullValue = null;
-            this.tbVille_dgAbonnes.DefaultCellStyle = dataGridViewCellStyle33;
+            dataGridViewCellStyle7.Format = "D";
+            dataGridViewCellStyle7.NullValue = null;
+            this.tbVille_dgAbonnes.DefaultCellStyle = dataGridViewCellStyle7;
             this.tbVille_dgAbonnes.FillWeight = 150F;
             this.tbVille_dgAbonnes.HeaderText = "Ville";
             this.tbVille_dgAbonnes.MaxInputLength = 50;
@@ -247,7 +247,7 @@
             // tbCodePostal_dgAbonnes
             // 
             this.tbCodePostal_dgAbonnes.DataPropertyName = "CodePostal";
-            this.tbCodePostal_dgAbonnes.FillWeight = 50F;
+            this.tbCodePostal_dgAbonnes.FillWeight = 60F;
             this.tbCodePostal_dgAbonnes.HeaderText = "Code postal";
             this.tbCodePostal_dgAbonnes.MaxInputLength = 7;
             this.tbCodePostal_dgAbonnes.Name = "tbCodePostal_dgAbonnes";
@@ -255,8 +255,8 @@
             // tbTelephone_dgAbonnes
             // 
             this.tbTelephone_dgAbonnes.DataPropertyName = "Telephone";
-            dataGridViewCellStyle34.Format = "\"(###) ###-####\"";
-            this.tbTelephone_dgAbonnes.DefaultCellStyle = dataGridViewCellStyle34;
+            dataGridViewCellStyle8.Format = "\"(###) ###-####\"";
+            this.tbTelephone_dgAbonnes.DefaultCellStyle = dataGridViewCellStyle8;
             this.tbTelephone_dgAbonnes.HeaderText = "Téléphone";
             this.tbTelephone_dgAbonnes.MaxInputLength = 14;
             this.tbTelephone_dgAbonnes.Name = "tbTelephone_dgAbonnes";
@@ -265,8 +265,8 @@
             // tbCellulaire_dgAbonnes
             // 
             this.tbCellulaire_dgAbonnes.DataPropertyName = "Cellulaire";
-            dataGridViewCellStyle35.Format = "\"(###) ###-####\"";
-            this.tbCellulaire_dgAbonnes.DefaultCellStyle = dataGridViewCellStyle35;
+            dataGridViewCellStyle9.Format = "\"(###) ###-####\"";
+            this.tbCellulaire_dgAbonnes.DefaultCellStyle = dataGridViewCellStyle9;
             this.tbCellulaire_dgAbonnes.HeaderText = "Cellulaire";
             this.tbCellulaire_dgAbonnes.MaxInputLength = 14;
             this.tbCellulaire_dgAbonnes.Name = "tbCellulaire_dgAbonnes";
@@ -275,8 +275,8 @@
             // tbCourriel_dgAbonnes
             // 
             this.tbCourriel_dgAbonnes.DataPropertyName = "Courriel";
-            dataGridViewCellStyle36.Format = "\"(###) ###-####\"";
-            this.tbCourriel_dgAbonnes.DefaultCellStyle = dataGridViewCellStyle36;
+            dataGridViewCellStyle10.Format = "\"(###) ###-####\"";
+            this.tbCourriel_dgAbonnes.DefaultCellStyle = dataGridViewCellStyle10;
             this.tbCourriel_dgAbonnes.FillWeight = 150F;
             this.tbCourriel_dgAbonnes.HeaderText = "Courriel";
             this.tbCourriel_dgAbonnes.MaxInputLength = 100;
@@ -323,8 +323,8 @@
             // dataGridViewTextBoxColumn11
             // 
             this.dataGridViewTextBoxColumn11.DataPropertyName = "Telephone";
-            dataGridViewCellStyle37.Format = "\"(###) ###-####\"";
-            this.dataGridViewTextBoxColumn11.DefaultCellStyle = dataGridViewCellStyle37;
+            dataGridViewCellStyle11.Format = "\"(###) ###-####\"";
+            this.dataGridViewTextBoxColumn11.DefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridViewTextBoxColumn11.HeaderText = "Telephone";
             this.dataGridViewTextBoxColumn11.MaxInputLength = 10;
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
@@ -333,8 +333,8 @@
             // dataGridViewTextBoxColumn12
             // 
             this.dataGridViewTextBoxColumn12.DataPropertyName = "Cellulaire";
-            dataGridViewCellStyle38.Format = "\"(###) ###-####\"";
-            this.dataGridViewTextBoxColumn12.DefaultCellStyle = dataGridViewCellStyle38;
+            dataGridViewCellStyle12.Format = "\"(###) ###-####\"";
+            this.dataGridViewTextBoxColumn12.DefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridViewTextBoxColumn12.HeaderText = "Cellulaire";
             this.dataGridViewTextBoxColumn12.MaxInputLength = 10;
             this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
@@ -419,9 +419,9 @@
             // tbDateNaissance_dgDependants
             // 
             this.tbDateNaissance_dgDependants.DataPropertyName = "DateNaissance";
-            dataGridViewCellStyle39.Format = "D";
-            dataGridViewCellStyle39.NullValue = null;
-            this.tbDateNaissance_dgDependants.DefaultCellStyle = dataGridViewCellStyle39;
+            dataGridViewCellStyle13.Format = "D";
+            dataGridViewCellStyle13.NullValue = null;
+            this.tbDateNaissance_dgDependants.DefaultCellStyle = dataGridViewCellStyle13;
             this.tbDateNaissance_dgDependants.FillWeight = 125F;
             this.tbDateNaissance_dgDependants.HeaderText = "Date de naissance";
             this.tbDateNaissance_dgDependants.Name = "tbDateNaissance_dgDependants";
@@ -463,7 +463,10 @@
             this.Controls.Add(this.lblDependants);
             this.Controls.Add(this.lblAbonnes);
             this.Controls.Add(this.dgAbonnes);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "MettreAJourAbonnes";
+            this.ShowIcon = false;
             this.Text = "Mettre à jour les abonnés";
             this.Load += new System.EventHandler(this.MettreAJourAbonnes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.abonnementsBindingSource)).EndInit();
@@ -492,6 +495,13 @@
         private System.Windows.Forms.BindingSource dependantsBindingSource;
         private System.Windows.Forms.DataGridView dgDependants;
         private System.Windows.Forms.Button btnMettreAJourAbonnes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tbId_dgDependants;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tbNom_dgDependants;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tbPrenom_dgDependants;
+        private System.Windows.Forms.DataGridViewComboBoxColumn ddlSexes_dgDependants;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tbDateNaissance_dgDependants;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tbIdAbonnement_dgDependants;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tbRemarque_dgDependants;
         private System.Windows.Forms.DataGridViewTextBoxColumn tbId_dgAbonnes;
         private System.Windows.Forms.DataGridViewTextBoxColumn tbDateAbonnement_dgAbonnes;
         private System.Windows.Forms.DataGridViewTextBoxColumn tbNom_dgAbonnes;
@@ -508,12 +518,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tbCourriel_dgAbonnes;
         private System.Windows.Forms.DataGridViewComboBoxColumn ddlTypesAbonnement_dgAbonnes;
         private System.Windows.Forms.DataGridViewTextBoxColumn tbRemarque_dgAbonnes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tbId_dgDependants;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tbNom_dgDependants;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tbPrenom_dgDependants;
-        private System.Windows.Forms.DataGridViewComboBoxColumn ddlSexes_dgDependants;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tbDateNaissance_dgDependants;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tbIdAbonnement_dgDependants;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tbRemarque_dgDependants;
     }
 }

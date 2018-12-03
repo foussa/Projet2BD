@@ -103,8 +103,11 @@
             this.Controls.Add(this.tbRemarque);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ddlAbonnements);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MinimizeBox = false;
             this.Name = "RenouvellerAbonnement";
+            this.ShowIcon = false;
             this.Text = "Renouveller un abonnement";
             this.Load += new System.EventHandler(this.RenouvellerAbonnement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.abonnementsBindingSource)).EndInit();

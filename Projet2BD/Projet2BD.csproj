@@ -33,6 +33,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
@@ -48,12 +66,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbonnementAnneeSumDepenses.cs" />
+    <Compile Include="AbonnementMoisSumDepenses.cs" />
+    <Compile Include="Depense.cs" />
     <Compile Include="MettreAJourAbonnes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MettreAJourAbonnes.Designer.cs">
       <DependentUpon>MettreAJourAbonnes.cs</DependentUpon>
     </Compile>
+    <Compile Include="PartieJouee.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="TerrainAnneeNbPartiesJouees.cs" />
+    <Compile Include="TerrainMoisNbPartiesJouees.cs" />
+    <Compile Include="TypeAbonnementAnneeNbAbonnements.cs" />
+    <Compile Include="TypeAbonnementMoisNbAbonnements.cs" />
     <Compile Include="VisualiserRapports.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +164,7 @@
     <EmbeddedResource Include="MettreAJourAbonnes.resx">
       <DependentUpon>MettreAJourAbonnes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RapportNbAbonnementsParAnneeEtTypeAbonnement.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -146,9 +174,20 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RapportNbPartiesJoueesParAnneeEtTerrain.rdlc" />
+    <EmbeddedResource Include="RapportNbPartiesJoueesParMoisEtTerrain.rdlc" />
+    <EmbeddedResource Include="RapportSumDepensesParAnneeEtAbonnement.rdlc" />
+    <EmbeddedResource Include="RapportSumDepensesParMoisEtAbonnement.rdlc" />
     <EmbeddedResource Include="RenouvellerAbonnement.resx">
       <DependentUpon>RenouvellerAbonnement.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RapportDepensesParEmploye.rdlc" />
+    <EmbeddedResource Include="RapportDepensesParAbonnement.rdlc" />
+    <EmbeddedResource Include="RapportDepensesParAnnee.rdlc" />
+    <EmbeddedResource Include="RapportPartiesJoueesParTerrain.rdlc" />
+    <EmbeddedResource Include="RapportPartiesJoueesParAbonnement.rdlc" />
+    <EmbeddedResource Include="RapportPartiesJoueesParAnnee.rdlc" />
+    <EmbeddedResource Include="RapportNbAbonnementsParMoisEtTypeAbonnement.rdlc" />
     <EmbeddedResource Include="SaisieDependant.resx">
       <DependentUpon>SaisieDependant.cs</DependentUpon>
     </EmbeddedResource>
@@ -166,16 +205,25 @@
     <None Include="DataClasses1.dbml.layout">
       <DependentUpon>DataClasses1.dbml</DependentUpon>
     </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\AbonnementAnneeSumDepenses.datasource" />
+    <None Include="Properties\DataSources\AbonnementMoisSumDepenses.datasource" />
     <None Include="Properties\DataSources\Abonnements.datasource" />
     <None Include="Properties\DataSources\Dependants.datasource" />
+    <None Include="Properties\DataSources\Depense.datasource" />
     <None Include="Properties\DataSources\Depenses.datasource" />
     <None Include="Properties\DataSources\Employes.datasource" />
+    <None Include="Properties\DataSources\PartieJouee.datasource" />
     <None Include="Properties\DataSources\PartiesJouees.datasource" />
     <None Include="Properties\DataSources\PrixDepensesAbonnements.datasource" />
     <None Include="Properties\DataSources\Provinces.datasource" />
     <None Include="Properties\DataSources\Reabonnements.datasource" />
     <None Include="Properties\DataSources\Services.datasource" />
     <None Include="Properties\DataSources\Sexe.datasource" />
+    <None Include="Properties\DataSources\TerrainAnneeNbPartiesJouees.datasource" />
+    <None Include="Properties\DataSources\TerrainMoisNbPartiesJouees.datasource" />
+    <None Include="Properties\DataSources\TypeAbonnementAnneeNbAbonnements.datasource" />
+    <None Include="Properties\DataSources\TypeAbonnementMoisNbAbonnements.datasource" />
     <None Include="Properties\DataSources\TypesAbonnement.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -192,6 +240,21 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

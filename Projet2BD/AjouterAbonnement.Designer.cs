@@ -456,8 +456,11 @@
             this.Controls.Add(this.tbNom);
             this.Controls.Add(lblPrenom);
             this.Controls.Add(this.tbPrenom);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
             this.Name = "AjouterAbonnement";
+            this.ShowIcon = false;
             this.Text = "Ajouter un nouvel abonnement";
             this.Load += new System.EventHandler(this.Abonnement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.provincesBindingSource)).EndInit();
