@@ -105,7 +105,7 @@ namespace Projet2BD
                     Label lblNbEnfants = new Label();
                     lblNbEnfants.Name = "lblNbEnfants";
                     lblNbEnfants.Text = "Nombre d\'enfants :";
-                    lblNbEnfants.Location = new Point(30, 351);
+                    lblNbEnfants.Location = new Point(20, 351);
                     lstControlesDynamiques.Add(lblNbEnfants);
                     lstControlesDynamiques.Add(numNbEnfants);
                     lstControlesDynamiques.Add(new SaisieDependant(363, 20, 0));

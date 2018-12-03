@@ -85,7 +85,7 @@
             // lblPrenom
             // 
             lblPrenom.AutoSize = true;
-            lblPrenom.Location = new System.Drawing.Point(83, 52);
+            lblPrenom.Location = new System.Drawing.Point(20, 52);
             lblPrenom.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             lblPrenom.Name = "lblPrenom";
             lblPrenom.Size = new System.Drawing.Size(46, 13);
@@ -95,7 +95,7 @@
             // lblNom
             // 
             lblNom.AutoSize = true;
-            lblNom.Location = new System.Drawing.Point(94, 76);
+            lblNom.Location = new System.Drawing.Point(20, 76);
             lblNom.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             lblNom.Name = "lblNom";
             lblNom.Size = new System.Drawing.Size(35, 13);
@@ -105,7 +105,7 @@
             // lblDateNaissance
             // 
             lblDateNaissance.AutoSize = true;
-            lblDateNaissance.Location = new System.Drawing.Point(27, 125);
+            lblDateNaissance.Location = new System.Drawing.Point(20, 125);
             lblDateNaissance.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             lblDateNaissance.Name = "lblDateNaissance";
             lblDateNaissance.Size = new System.Drawing.Size(102, 13);
@@ -115,7 +115,7 @@
             // lblSexe
             // 
             lblSexe.AutoSize = true;
-            lblSexe.Location = new System.Drawing.Point(92, 100);
+            lblSexe.Location = new System.Drawing.Point(20, 100);
             lblSexe.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             lblSexe.Name = "lblSexe";
             lblSexe.Size = new System.Drawing.Size(37, 13);
@@ -125,7 +125,7 @@
             // lblNoCivique
             // 
             lblNoCivique.AutoSize = true;
-            lblNoCivique.Location = new System.Drawing.Point(66, 150);
+            lblNoCivique.Location = new System.Drawing.Point(20, 150);
             lblNoCivique.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             lblNoCivique.Name = "lblNoCivique";
             lblNoCivique.Size = new System.Drawing.Size(62, 13);
@@ -145,7 +145,7 @@
             // lblVille
             // 
             lblVille.AutoSize = true;
-            lblVille.Location = new System.Drawing.Point(97, 175);
+            lblVille.Location = new System.Drawing.Point(20, 175);
             lblVille.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             lblVille.Name = "lblVille";
             lblVille.Size = new System.Drawing.Size(32, 13);
@@ -155,7 +155,7 @@
             // lblCodePostal
             // 
             lblCodePostal.AutoSize = true;
-            lblCodePostal.Location = new System.Drawing.Point(60, 224);
+            lblCodePostal.Location = new System.Drawing.Point(20, 224);
             lblCodePostal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             lblCodePostal.Name = "lblCodePostal";
             lblCodePostal.Size = new System.Drawing.Size(69, 13);
@@ -165,7 +165,7 @@
             // lblProvince
             // 
             lblProvince.AutoSize = true;
-            lblProvince.Location = new System.Drawing.Point(74, 199);
+            lblProvince.Location = new System.Drawing.Point(20, 199);
             lblProvince.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             lblProvince.Name = "lblProvince";
             lblProvince.Size = new System.Drawing.Size(55, 13);
@@ -175,7 +175,7 @@
             // lblCellulaire
             // 
             lblCellulaire.AutoSize = true;
-            lblCellulaire.Location = new System.Drawing.Point(72, 275);
+            lblCellulaire.Location = new System.Drawing.Point(20, 275);
             lblCellulaire.Name = "lblCellulaire";
             lblCellulaire.Size = new System.Drawing.Size(55, 13);
             lblCellulaire.TabIndex = 21;
@@ -184,7 +184,7 @@
             // lblCourriel
             // 
             lblCourriel.AutoSize = true;
-            lblCourriel.Location = new System.Drawing.Point(79, 301);
+            lblCourriel.Location = new System.Drawing.Point(20, 301);
             lblCourriel.Name = "lblCourriel";
             lblCourriel.Size = new System.Drawing.Size(48, 13);
             lblCourriel.TabIndex = 22;
@@ -193,7 +193,7 @@
             // lblTelephone
             // 
             lblTelephone.AutoSize = true;
-            lblTelephone.Location = new System.Drawing.Point(63, 249);
+            lblTelephone.Location = new System.Drawing.Point(20, 249);
             lblTelephone.Name = "lblTelephone";
             lblTelephone.Size = new System.Drawing.Size(64, 13);
             lblTelephone.TabIndex = 24;
@@ -410,7 +410,7 @@
             // lblRemarque
             // 
             this.lblRemarque.AutoSize = true;
-            this.lblRemarque.Location = new System.Drawing.Point(65, 352);
+            this.lblRemarque.Location = new System.Drawing.Point(20, 352);
             this.lblRemarque.Name = "lblRemarque";
             this.lblRemarque.Size = new System.Drawing.Size(62, 13);
             this.lblRemarque.TabIndex = 34;

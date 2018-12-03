@@ -67,7 +67,7 @@
             // lblRemarque
             // 
             this.lblRemarque.AutoSize = true;
-            this.lblRemarque.Location = new System.Drawing.Point(30, 49);
+            this.lblRemarque.Location = new System.Drawing.Point(20, 49);
             this.lblRemarque.Name = "lblRemarque";
             this.lblRemarque.Size = new System.Drawing.Size(62, 13);
             this.lblRemarque.TabIndex = 36;
