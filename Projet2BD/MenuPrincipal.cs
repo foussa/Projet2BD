@@ -116,7 +116,7 @@ namespace Projet2BD
 
         private void btnInscrirePartie_Click(object sender, EventArgs e)
         {
-
+            new InscriptionPartieDeGolfJouée().ShowDialog();
         }
 
         private void btnInscrireDepense_Click(object sender, EventArgs e)

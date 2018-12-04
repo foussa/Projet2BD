@@ -68,7 +68,47 @@
   <ItemGroup>
     <Compile Include="AbonnementAnneeSumDepenses.cs" />
     <Compile Include="AbonnementMoisSumDepenses.cs" />
+    <Compile Include="DataClasses1.cs">
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataClasses1.designer.cs">
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Depense.cs" />
+    <Compile Include="DepenseEtTouteSesInformations.cs" />
+    <Compile Include="frmAjouterEmploye.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAjouterEmploye.designer.cs">
+      <DependentUpon>frmAjouterEmploye.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInscriptionDepense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInscriptionDepense.designer.cs">
+      <DependentUpon>frmInscriptionDepense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmModificationEmploye.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModificationEmploye.designer.cs">
+      <DependentUpon>frmModificationEmploye.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionEmploye.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionEmploye.designer.cs">
+      <DependentUpon>GestionEmploye.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IdEtNomProvince.cs" />
+    <Compile Include="InscriptionPartieDeGolfJouée.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InscriptionPartieDeGolfJouée.designer.cs">
+      <DependentUpon>InscriptionPartieDeGolfJouée.cs</DependentUpon>
+    </Compile>
     <Compile Include="MettreAJourAbonnes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +121,10 @@
     <Compile Include="ModifierPrixEtDepensesObligatoires.Designer.cs">
       <DependentUpon>ModifierPrixEtDepensesObligatoires.cs</DependentUpon>
     </Compile>
+    <Compile Include="noEtNomTerrains.cs" />
+    <Compile Include="NoEtTypeEmploye.cs" />
+    <Compile Include="noNomEtPrenomAbonne.cs" />
+    <Compile Include="partieDeGolfJouee.cs" />
     <Compile Include="PartieJouee.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="TerrainAnneeNbPartiesJouees.cs" />
@@ -105,20 +149,6 @@
     <Compile Include="AjouterAbonnement.Designer.cs">
       <DependentUpon>AjouterAbonnement.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataClasses1.cs">
-      <DependentUpon>DataClasses1.dbml</DependentUpon>
-    </Compile>
-    <Compile Include="DataClasses1.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataClasses1.dbml</DependentUpon>
-    </Compile>
-    <Compile Include="frmAjouterEmploye.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmAjouterEmploye.Designer.cs">
-      <DependentUpon>frmAjouterEmploye.cs</DependentUpon>
-    </Compile>
     <Compile Include="Connexion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,12 +160,6 @@
     </Compile>
     <Compile Include="MenuPrincipal.Designer.cs">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GestionEmploye.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GestionEmploye.Designer.cs">
-      <DependentUpon>GestionEmploye.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -155,17 +179,26 @@
     <EmbeddedResource Include="AjouterAbonnement.resx">
       <DependentUpon>AjouterAbonnement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAjouterEmploye.resx">
-      <DependentUpon>frmAjouterEmploye.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Connexion.resx">
       <DependentUpon>Connexion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MenuPrincipal.resx">
-      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    <EmbeddedResource Include="frmAjouterEmploye.resx">
+      <DependentUpon>frmAjouterEmploye.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInscriptionDepense.resx">
+      <DependentUpon>frmInscriptionDepense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModificationEmploye.resx">
+      <DependentUpon>frmModificationEmploye.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GestionEmploye.resx">
       <DependentUpon>GestionEmploye.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InscriptionPartieDeGolfJouée.resx">
+      <DependentUpon>InscriptionPartieDeGolfJouée.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPrincipal.resx">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MettreAJourAbonnes.resx">
       <DependentUpon>MettreAJourAbonnes.cs</DependentUpon>
