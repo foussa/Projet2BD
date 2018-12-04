@@ -100,7 +100,6 @@ namespace Projet2BD
 
         private void btnModification_Click(object sender, EventArgs e)
         {
-            GestionEmploye fGestionEmploye = new GestionEmploye();
             Boolean booOK = true;
             var exprCodePostal = new Regex(@"^[A-Za-z][0-9][A-Za-z] ?[0-9][A-Za-z][0-9]$");
             var exprTel = new Regex(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$");

@@ -14,9 +14,12 @@ namespace Projet2BD
     {
         private DataClasses1DataContext dataContext = new DataClasses1DataContext();
         public static string noEmploye = "";
-        public GestionEmploye()
+        private int noEmployeConnecte;
+
+        public GestionEmploye(int noEmploye)
         {
             InitializeComponent();
+            noEmployeConnecte = noEmploye;
         }
 
         /*  private void employesBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -100,6 +103,7 @@ namespace Projet2BD
                                    select unService;
                     if (c.NoTypeEmploye == 1) MessageBox.Show("Impossible de supprimer un administrateur", "Erreur");
                     else if (servivce.Count() > 0) MessageBox.Show("Impossible de supprimer cet employé, car il donne des services", "Erreur");
+                    else if (c.No == noEmployeConnecte) MessageBox.Show("Impossible de supprimer cet employé, car c'est vous", "Erreur");
                     else
                     {
                         DialogResult dr = MessageBox.Show("Êtes-vous sur de vouloir supprimer cet utilisateur ?.", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Information);

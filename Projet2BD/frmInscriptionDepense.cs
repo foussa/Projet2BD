@@ -12,14 +12,17 @@ namespace Projet2BD
 {
     public partial class frmInscriptionDepense : Form
     {
-        int intNoTypeEmploye = 5;
-        int intNoEmploye = 9;
-        String strTypeService;
+        private int intNoTypeEmploye;
+        private int intNoEmploye;
+        private string strTypeService;
 
-        DataClasses1DataContext dataContext = new DataClasses1DataContext();
-        public frmInscriptionDepense()
+        private DataClasses1DataContext dataContext = new DataClasses1DataContext();
+
+        public frmInscriptionDepense(int noEmploye, int noTypeEmploye)
         {
             InitializeComponent();
+            intNoEmploye = noEmploye;
+            intNoTypeEmploye = noTypeEmploye;
         }
 
         private void frmInscriptionDepense_Load(object sender, EventArgs e)

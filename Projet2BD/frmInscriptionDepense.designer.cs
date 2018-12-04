@@ -289,7 +289,6 @@
         private System.Windows.Forms.Button btnInscriptionDepense;
         private System.Windows.Forms.BindingSource depenseEtTouteSesInformationsBindingSource;
         private System.Windows.Forms.DataGridView depenseEtTouteSesInformationsDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;

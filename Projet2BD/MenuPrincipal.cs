@@ -28,12 +28,14 @@ namespace Projet2BD
                     btnMettreAJourAbonnes.Enabled = true;
                     btnModifierPrixEtDepensesObligatoires.Enabled = true;
                     btnInscrirePartie.Enabled = true;
+                    btnInscrireDepense.Enabled = true;
                     btnVisualiserRapports.Enabled = true;
                     btnVisualiserStatistiques.Enabled = true;
                     break;
                 case 2:
                     btnGererEmployes.Enabled = true;
                     btnModifierPrixEtDepensesObligatoires.Enabled = true;
+                    btnInscrireDepense.Enabled = true;
                     btnVisualiserRapports.Enabled = true;
                     btnVisualiserStatistiques.Enabled = true;
                     break;
@@ -43,6 +45,7 @@ namespace Projet2BD
                     btnMettreAJourAbonnes.Enabled = true;
                     btnModifierPrixEtDepensesObligatoires.Enabled = true;
                     btnInscrirePartie.Enabled = true;
+                    btnInscrireDepense.Enabled = true;
                     btnVisualiserRapports.Enabled = true;
                     btnVisualiserStatistiques.Enabled = true;
                     break;
@@ -66,13 +69,14 @@ namespace Projet2BD
                     break;
                 case 7:
                     btnGererEmployes.Enabled = false;
+                    btnInscrireDepense.Enabled = true;
                     break;
             }
         }
 
         private void btnGererEmployes_Click(object sender, EventArgs e)
         {
-            new GestionEmploye().ShowDialog();
+            new GestionEmploye(noEmploye).ShowDialog();
         }
 
         private void btnAjouterAbonnement_Click(object sender, EventArgs e)
@@ -121,7 +125,7 @@ namespace Projet2BD
 
         private void btnInscrireDepense_Click(object sender, EventArgs e)
         {
-
+            new frmInscriptionDepense(noEmploye, noTypeEmploye).ShowDialog();
         }
 
         private void btnVisualiserRapports_Click(object sender, EventArgs e)
