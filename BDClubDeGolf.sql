@@ -172,6 +172,9 @@ INSERT INTO TypesEmploye VALUES (5, 'Employé Pro-Shop', NULL);
 INSERT INTO TypesEmploye VALUES (6, 'Employé d’un restaurant', NULL);
 INSERT INTO TypesEmploye VALUES (7, 'Professeur de golf', NULL);
 
+print 'Insertion des enregistrements dans la table Employes...'
+INSERT INTO Employes VALUES (1,	'Secret1', 'Lacroix', 'Hubert', 'H', 52, 567, '5e avenue', 'Montréal', 'QC', 'H3V8T2', 5146748504, 5146359976, 'hlacroix@videotron.ca', 44.55, 1, NULL);
+
 print 'Insertion des enregistrements dans la table TypesAbonnement...'
 INSERT INTO TypesAbonnement VALUES (1, 'Personne seule', NULL);
 INSERT INTO TypesAbonnement VALUES (2, 'Âge d’or', NULL);
@@ -179,6 +182,14 @@ INSERT INTO TypesAbonnement VALUES (3, 'Couple', NULL);
 INSERT INTO TypesAbonnement VALUES (4, 'Famille (couple + 1 enfant)', NULL);
 INSERT INTO TypesAbonnement VALUES (5, 'Famille (couple + 2 enfants)', NULL);
 INSERT INTO TypesAbonnement VALUES (6, 'Famille (couple + 3 enfants ou plus)', NULL);
+
+print 'Insertion des enregistrements dans la table PrixDepensesAbonnements...'
+INSERT INTO PrixDepensesAbonnements VALUES (1, 2017, 850, 400, NULL);
+INSERT INTO PrixDepensesAbonnements VALUES (2, 2017, 500, 400, NULL);
+INSERT INTO PrixDepensesAbonnements VALUES (3, 2017, 1200, 700, NULL);
+INSERT INTO PrixDepensesAbonnements VALUES (4, 2017, 1700, 700, NULL);
+INSERT INTO PrixDepensesAbonnements VALUES (5, 2017, 1900, 700, NULL);
+INSERT INTO PrixDepensesAbonnements VALUES (6, 2017, 2100, 700, NULL);
 
 print 'Insertion des enregistrements dans la table Terrains...'
 INSERT INTO Terrains VALUES (1, 'Club de golf St-Raphaël', 9, 'Situé au coeur de la charmante île Bizard, à quelques minutes seulement de la ville, le Golf Saint-Raphaël vous fera vivre une expérience unique du début à la fin.', NULL);

@@ -103,7 +103,15 @@ namespace Projet2BD
 
         private void btnModifierPrixEtDepensesObligatoires_Click(object sender, EventArgs e)
         {
-
+            if (dataContext.PrixDepensesAbonnements.
+                     Max(prixDepensesAbonnement =>
+                         prixDepensesAbonnement.Annee) < DateTime.Today.Year)
+                new ModifierPrixEtDepensesObligatoires().ShowDialog();
+            else
+                MessageBox.Show("Les derniers prix et dépenses obligatoires ont été insérés " +
+                                "cette année. Vous devez attendre l'année prochaine pour " +
+                                "modifier ces montants.",
+                                "Modification des prix et dépenses obligatoires");
         }
 
         private void btnInscrirePartie_Click(object sender, EventArgs e)

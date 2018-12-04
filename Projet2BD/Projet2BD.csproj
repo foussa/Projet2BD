@@ -75,6 +75,12 @@
     <Compile Include="MettreAJourAbonnes.Designer.cs">
       <DependentUpon>MettreAJourAbonnes.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModifierPrixEtDepensesObligatoires.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifierPrixEtDepensesObligatoires.Designer.cs">
+      <DependentUpon>ModifierPrixEtDepensesObligatoires.cs</DependentUpon>
+    </Compile>
     <Compile Include="PartieJouee.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="TerrainAnneeNbPartiesJouees.cs" />
@@ -163,6 +169,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MettreAJourAbonnes.resx">
       <DependentUpon>MettreAJourAbonnes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifierPrixEtDepensesObligatoires.resx">
+      <DependentUpon>ModifierPrixEtDepensesObligatoires.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RapportNbAbonnementsParAnneeEtTypeAbonnement.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
